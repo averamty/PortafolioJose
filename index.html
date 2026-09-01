@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>José Reyes Luna — Producción Audiovisual & Paid Media</title>
+<meta name="description" content="José Reyes Luna — director creativo en Monterrey. Producción audiovisual, fotografía de eventos y estrategia de Paid Media (Meta Ads) para marcas e instituciones.">
+<meta property="og:title" content="José Reyes Luna — Producción Audiovisual & Paid Media">
+<meta property="og:description" content="Produzco el video y opero la pauta: contenido pensado, desde el guion, para funcionar en Meta Ads.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='24' fill='%23121010'/%3E%3Ctext x='50' y='68' font-size='58' font-family='sans-serif' font-weight='700' fill='%23D97748' text-anchor='middle'%3EJ%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://api.fontshare.com/v2/css?f[]=general-sans@400,500,600,700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#121010;
+    --ink-soft:#1C1815;
+    --card:#221D1A;
+    --paper:#F2ECE4;
+    --muted:#948A80;
+    --line:rgba(242,236,228,0.12);
+    --terracota:#D97748;
+    --terracota-deep:#8F4A2E;
+    --r-lg:28px;
+    --r-md:18px;
+    --r-pill:999px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;}
+  @media (prefers-reduced-motion: reduce){html{scroll-behavior:auto;}}
+  body{background:var(--ink);color:var(--paper);font-family:'General Sans',sans-serif;line-height:1.55;-webkit-font-smoothing:antialiased;}
+  .mono{font-family:'IBM Plex Mono',monospace;}
+  a{color:inherit;text-decoration:none;}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 24px;}
+  section{padding:96px 0;}
+  @media(max-width:640px){section{padding:64px 0;}}
+
+  /* ---- nav ---- */
+  header{position:sticky;top:0;z-index:50;background:rgba(18,16,16,0.85);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);}
+  nav.wrap{display:flex;justify-content:space-between;align-items:center;padding:16px 24px;}
+  .brand{font-weight:600;font-size:0.98rem;letter-spacing:0.01em;}
+  .brand .mono{color:var(--terracota);font-size:0.75rem;}
+  .navlinks{display:none;gap:8px;font-size:0.85rem;}
+  .navlinks a{padding:9px 16px;border-radius:var(--r-pill);opacity:0.75;transition:all .15s;}
+  .navlinks a:hover{opacity:1;background:var(--card);}
+  @media(min-width:760px){.navlinks{display:flex;}}
+  .nav-right{display:flex;align-items:center;gap:10px;}
+  .nav-cta{padding:9px 18px;border-radius:var(--r-pill);background:var(--terracota);color:var(--ink);font-size:0.85rem;font-weight:600;}
+
+  /* ---- mobile menu ---- */
+  .nav-toggle{display:flex;flex-direction:column;justify-content:center;gap:4px;width:38px;height:38px;border-radius:var(--r-pill);border:1px solid var(--line);background:transparent;cursor:pointer;padding:0;align-items:center;}
+  @media(min-width:760px){.nav-toggle{display:none;}}
+  .nav-toggle span{display:block;width:16px;height:2px;background:var(--paper);border-radius:2px;transition:transform .2s ease,opacity .2s ease;}
+  .nav-toggle[aria-expanded="true"] span:nth-child(1){transform:translateY(6px) rotate(45deg);}
+  .nav-toggle[aria-expanded="true"] span:nth-child(2){opacity:0;}
+  .nav-toggle[aria-expanded="true"] span:nth-child(3){transform:translateY(-6px) rotate(-45deg);}
+  .mobile-panel{display:none;flex-direction:column;gap:4px;padding:8px 24px 20px;border-bottom:1px solid var(--line);background:var(--ink);}
+  .mobile-panel.open{display:flex;}
+  .mobile-panel a{padding:12px 16px;border-radius:var(--r-md);font-size:0.95rem;opacity:0.8;}
+  .mobile-panel a:hover{opacity:1;background:var(--card);}
+  @media(min-width:760px){.mobile-panel{display:none !important;}}
+
+  /* ---- hero ---- */
+  .hero{
+    position:relative;min-height:86vh;display:flex;align-items:flex-end;
+    background:
+      radial-gradient(120% 90% at 75% 15%, rgba(217,119,72,0.45) 0%, transparent 55%),
+      radial-gradient(90% 70% at 15% 85%, rgba(143,74,46,0.28) 0%, transparent 60%),
+      linear-gradient(180deg, #1A1512 0%, #0D0B0A 70%, #0A0908 100%);
+    overflow:hidden;margin:16px;border-radius:var(--r-lg);
+  }
+  @media(max-width:640px){.hero{margin:8px;border-radius:20px;}}
+  .photo-note{position:absolute;top:24px;right:24px;z-index:3;font-size:0.66rem;color:rgba(242,236,228,0.4);border:1px dashed rgba(242,236,228,0.3);padding:6px 12px;border-radius:var(--r-pill);max-width:200px;text-align:right;}
+  .hero-inner{position:relative;z-index:2;padding:64px 40px;width:100%;}
+  @media(max-width:640px){.hero-inner{padding:48px 24px;}}
+  .pill-tag{display:inline-flex;align-items:center;gap:8px;padding:8px 16px;border-radius:var(--r-pill);background:rgba(242,236,228,0.08);border:1px solid var(--line);font-size:0.78rem;letter-spacing:0.04em;margin-bottom:24px;}
+  .pill-tag .dot{width:6px;height:6px;border-radius:50%;background:var(--terracota);}
+  h1{font-size:clamp(2.6rem,7vw,5.2rem);font-weight:700;line-height:1.02;letter-spacing:-0.02em;max-width:15ch;}
+  h1 em{font-style:normal;color:var(--terracota);}
+  .tagline{margin-top:24px;font-size:1.12rem;max-width:44ch;color:rgba(242,236,228,0.72);}
+  .cta-row{display:flex;flex-wrap:wrap;gap:12px;margin-top:36px;}
+  .btn{display:inline-block;padding:15px 30px;font-size:0.92rem;font-weight:600;border-radius:var(--r-pill);transition:all .15s;}
+  .btn-primary{background:var(--terracota);color:var(--ink);}
+  .btn-primary:hover{background:#fff;transform:translateY(-1px);}
+  .btn-ghost{border:1px solid rgba(242,236,228,0.3);color:var(--paper);}
+  .btn-ghost:hover{border-color:var(--terracota);color:var(--terracota);}
+  .stats-row{display:flex;flex-wrap:wrap;gap:36px;margin-top:56px;padding-top:32px;border-top:1px solid var(--line);}
+  .stat .num{font-size:1.7rem;font-weight:700;color:var(--terracota);}
+  .stat .label{font-size:0.78rem;color:var(--muted);margin-top:4px;}
+
+  /* ---- trust strip ---- */
+  .trust{padding:0 0 48px;}
+  .trust-label{font-size:0.72rem;letter-spacing:0.1em;color:var(--muted);margin-bottom:20px;text-transform:uppercase;}
+  .trust-row{display:flex;flex-wrap:wrap;gap:12px;}
+  .trust-row span{padding:9px 18px;border-radius:var(--r-pill);border:1px solid var(--line);font-size:0.88rem;color:rgba(242,236,228,0.65);}
+
+  /* ---- section headers ---- */
+  .sec-head{margin-bottom:44px;}
+  .pill-eyebrow{display:inline-block;padding:7px 15px;border-radius:var(--r-pill);background:var(--card);color:var(--terracota);font-size:0.75rem;margin-bottom:16px;}
+  h2{font-size:clamp(1.8rem,3.8vw,2.5rem);font-weight:700;letter-spacing:-0.01em;}
+  .sec-sub{color:var(--muted);max-width:56ch;margin-top:12px;}
+
+  /* ---- sobre mi: wordmark style ---- */
+  .about-wordmark{font-size:clamp(3rem,10vw,7rem);font-weight:700;letter-spacing:-0.03em;color:var(--card);line-height:0.85;-webkit-text-stroke:1px var(--line);}
+  .about-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:48px;align-items:center;margin-top:36px;}
+  @media(max-width:760px){.about-grid{grid-template-columns:1fr;}}
+  .about-photo{
+    aspect-ratio:4/5;border-radius:var(--r-lg);
+    background:linear-gradient(160deg,#2A2420,#14100D);
+    display:flex;align-items:center;justify-content:center;text-align:center;
+    font-size:0.75rem;color:var(--muted);padding:20px;border:1px solid var(--line);
+  }
+  .about-text p{margin-bottom:16px;color:rgba(242,236,228,0.72);}
+  .facts{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px;}
+  .facts .fact-pill{padding:9px 16px;border-radius:var(--r-pill);background:var(--card);font-size:0.82rem;border:1px solid var(--line);}
+  .facts .fact-pill b{color:var(--terracota);font-weight:600;}
+
+  /* ---- servicios: cards, uno destacado ---- */
+  .services{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:36px;}
+  @media(max-width:900px){.services{grid-template-columns:repeat(2,1fr);}}
+  @media(max-width:520px){.services{grid-template-columns:1fr;}}
+  .service{background:var(--card);border-radius:var(--r-md);padding:28px 24px;border:1px solid var(--line);}
+  .service.featured{background:var(--terracota);color:var(--ink);border-color:var(--terracota);}
+  .service .mono{font-size:0.72rem;color:var(--terracota);}
+  .service.featured .mono{color:rgba(18,16,16,0.6);}
+  .service h3{font-size:1.05rem;margin:12px 0 8px;font-weight:600;}
+  .service p{color:var(--muted);font-size:0.88rem;}
+  .service.featured p{color:rgba(18,16,16,0.7);}
+  .service .badge{display:inline-block;margin-top:14px;padding:6px 13px;border-radius:var(--r-pill);background:rgba(242,236,228,0.08);font-size:0.72rem;}
+  .service.featured .badge{background:rgba(18,16,16,0.12);}
+
+  /* ---- portafolio: tiles redondeados ---- */
+  .tabs{display:flex;gap:8px;margin-bottom:36px;flex-wrap:wrap;}
+  .tab-btn{padding:10px 20px;border:1px solid var(--line);border-radius:var(--r-pill);font-size:0.85rem;background:transparent;cursor:pointer;font-family:inherit;color:var(--muted);}
+  .tab-btn.active{background:var(--paper);color:var(--ink);border-color:var(--paper);}
+  .tab-panel{display:none;}
+  .tab-panel.active{display:block;}
+  .media-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;}
+  @media(max-width:640px){.media-grid{grid-template-columns:1fr;}}
+  .media-card{border-radius:var(--r-lg);overflow:hidden;background:var(--card);border:1px solid var(--line);}
+  .media-embed{
+    aspect-ratio:16/9;background:linear-gradient(135deg,#2A2420 0%,#14100D 100%);
+    filter:grayscale(1);display:flex;align-items:center;justify-content:center;
+    font-size:0.74rem;color:rgba(242,236,228,0.35);text-align:center;padding:20px;
+    transition:filter .4s ease;
+  }
+  .media-card:hover .media-embed{filter:grayscale(0);}
+  .media-card .cap{padding:20px 22px;display:flex;justify-content:space-between;align-items:center;gap:12px;}
+  .media-card .cap .txt .mono{font-size:0.7rem;color:var(--terracota);}
+  .media-card .cap h4{font-size:1rem;margin:6px 0 3px;font-weight:600;}
+  .media-card .cap p{font-size:0.83rem;color:var(--muted);}
+  .view-badge{flex-shrink:0;width:38px;height:38px;border-radius:50%;background:var(--terracota);color:var(--ink);display:flex;align-items:center;justify-content:center;font-size:0.9rem;}
+
+  /* ---- casos de exito ---- */
+  .case-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:36px;}
+  @media(max-width:760px){.case-grid{grid-template-columns:1fr;}}
+  .case{background:var(--card);border-radius:var(--r-md);padding:30px;border:1px solid var(--line);}
+  .case .metric{font-size:2.1rem;font-weight:700;color:var(--terracota);}
+  .case .metric-label{font-size:0.78rem;color:var(--muted);margin:6px 0 14px;}
+  .case p{font-size:0.87rem;color:rgba(242,236,228,0.6);}
+
+  /* ---- contacto ---- */
+  .contact-box{background:var(--terracota);color:var(--ink);border-radius:var(--r-lg);padding:56px 40px;margin:0 16px 16px;display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:28px;}
+  @media(max-width:640px){.contact-box{margin:0 8px 8px;padding:40px 24px;}}
+  .contact-box h2{color:var(--ink);}
+  .contact-links{display:flex;flex-direction:column;gap:10px;}
+  .contact-links a{display:inline-block;padding:12px 20px;border-radius:var(--r-pill);background:rgba(18,16,16,0.1);font-size:0.95rem;font-weight:500;transition:background .15s;}
+  .contact-links a:hover{background:rgba(18,16,16,0.18);}
+
+  footer{padding:32px 24px;font-size:0.8rem;color:var(--muted);display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;}
+</style>
+</head>
+<body>
+
+<header>
+  <nav class="wrap">
+    <div class="brand">JOSÉ REYES LUNA <span class="mono">/ audiovisual + paid media</span></div>
+    <div class="navlinks">
+      <a href="#sobre-mi">Sobre mí</a>
+      <a href="#servicios">Servicios</a>
+      <a href="#portafolio">Portafolio</a>
+      <a href="#casos">Casos</a>
+    </div>
+    <div class="nav-right">
+      <a href="#contacto" class="nav-cta">Contacto</a>
+      <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="mobilePanel" aria-label="Abrir menú">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+  <div class="mobile-panel" id="mobilePanel">
+    <a href="#sobre-mi">Sobre mí</a>
+    <a href="#servicios">Servicios</a>
+    <a href="#portafolio">Portafolio</a>
+    <a href="#casos">Casos</a>
+    <a href="#contacto">Contacto</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="photo-note mono">[ SUSTITUIR FONDO POR FOTO TUYA ]</div>
+  <div class="wrap hero-inner">
+    <div class="pill-tag"><span class="dot"></span> Disponible para nuevos proyectos</div>
+    <h1>Cuento historias que <em>convierten</em>.</h1>
+    <p class="tagline">Produzco el video y opero la pauta: contenido pensado, desde el guion, para funcionar en Meta Ads.</p>
+    <div class="cta-row">
+      <a href="#portafolio" class="btn btn-primary">Ver portafolio</a>
+      <a href="#" class="btn btn-ghost">Descargar CV</a>
+    </div>
+    <div class="stats-row">
+      <div class="stat"><div class="num mono">10+</div><div class="label">años en audiovisual</div></div>
+      <div class="stat"><div class="num mono">26</div><div class="label">bodas como fotógrafo principal</div></div>
+      <div class="stat"><div class="num mono">3+</div><div class="label">marcas con pauta activa</div></div>
+    </div>
+  </div>
+</section>
+
+<div class="trust">
+  <div class="wrap">
+    <div class="trust-label mono">Trabajo con</div>
+    <div class="trust-row">
+      <span>Vioré Media</span>
+      <span>Cofilms</span>
+      <span>Cruz Roja Mexicana — Delegación N.L.</span>
+      <span>Tecmilenio</span>
+    </div>
+  </div>
+</div>
+
+<section id="sobre-mi">
+  <div class="wrap">
+    <div class="about-wordmark">SOBRE MÍ</div>
+    <div class="about-grid">
+      <div class="about-photo mono">[ FOTO TUYA — retrato cercano ]</div>
+      <div class="about-text">
+        <p>Soy director creativo y de marketing con base en Monterrey. Fundé Vioré Media, agencia de marketing digital en alianza con Cofilms, donde llevo pauta en Meta Ads, producción de contenido y estrategia para desarrolladoras inmobiliarias, firmas de arquitectura y marcas de consumo.</p>
+        <p>En paralelo, colaboro con Cruz Roja Mexicana Delegación Nuevo León en su estrategia institucional de contenido, y curso la Licenciatura en Mercadotecnia en Tecmilenio.</p>
+        <p>Antes de la pauta, están diez años detrás de la cámara: fotografía y producción audiovisual de eventos, incluidas 26 bodas como fotógrafo principal.</p>
+        <div class="facts">
+          <div class="fact-pill">Agencia: <b>Vioré Media × Cofilms</b></div>
+          <div class="fact-pill">Institucional: <b>Cruz Roja NL</b></div>
+          <div class="fact-pill">Formación: <b>Tecmilenio</b></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="servicios">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="pill-eyebrow mono">SERVICIOS</div>
+      <h2>En qué puedo ayudar</h2>
+    </div>
+    <div class="services">
+      <div class="service"><div class="mono">01</div><h3>Video institucional</h3><p>Guion, dirección y edición para redes y campañas.</p><span class="badge">Producción</span></div>
+      <div class="service featured"><div class="mono">02</div><h3>Paid Media</h3><p>Estrategia y pauta en Meta Ads, de la estructura a la optimización.</p><span class="badge">Más solicitado</span></div>
+      <div class="service"><div class="mono">03</div><h3>Fotografía de eventos</h3><p>Bodas y eventos corporativos, sesión y entrega final.</p><span class="badge">Fotografía</span></div>
+      <div class="service"><div class="mono">04</div><h3>Estrategia de contenido</h3><p>Calendarios editoriales y sistemas de marca consistentes.</p><span class="badge">Dirección</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="portafolio">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="pill-eyebrow mono">PORTAFOLIO</div>
+      <h2>Contenido en acción</h2>
+      <p class="sec-sub">Sustituye cada placeholder por tus álbumes de SmugMug y videos "no listados" de YouTube/Vimeo.</p>
+    </div>
+    <div class="tabs">
+      <button class="tab-btn active" data-tab="institucional">Institucional</button>
+      <button class="tab-btn" data-tab="fotografia">Fotografía / Reels</button>
+      <button class="tab-btn" data-tab="paidmedia">Paid Media</button>
+    </div>
+
+    <div class="tab-panel active" id="institucional">
+      <div class="media-grid">
+        <div class="media-card">
+          <div class="media-embed">[ EMBED YOUTUBE/VIMEO ]<br>Video generación Escuela Cruz Roja</div>
+          <div class="cap"><div class="txt"><div class="mono">CRUZ ROJA NL</div><h4>Graduación — Escuela</h4><p>Guion y dirección.</p></div><div class="view-badge">→</div></div>
+        </div>
+        <div class="media-card">
+          <div class="media-embed">[ EMBED YOUTUBE/VIMEO ]<br>Cierre campamento Salud en Acción</div>
+          <div class="cap"><div class="txt"><div class="mono">CRUZ ROJA NL</div><h4>Salud en Acción</h4><p>Voz en off y edición.</p></div><div class="view-badge">→</div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="tab-panel" id="fotografia">
+      <div class="media-grid">
+        <div class="media-card">
+          <div class="media-embed">[ ÁLBUM SMUGMUG ]<br>Selección de boda</div>
+          <div class="cap"><div class="txt"><div class="mono">BODAS</div><h4>Cobertura de boda</h4><p>Fotógrafo principal.</p></div><div class="view-badge">→</div></div>
+        </div>
+        <div class="media-card">
+          <div class="media-embed">[ REEL / ÁLBUM ]<br>Highlights de evento</div>
+          <div class="cap"><div class="txt"><div class="mono">EVENTOS</div><h4>Reel de highlights</h4><p>Formato vertical.</p></div><div class="view-badge">→</div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="tab-panel" id="paidmedia">
+      <div class="media-grid">
+        <div class="media-card">
+          <div class="media-embed">[ CAPTURA / MOCKUP ]</div>
+          <div class="cap"><div class="txt"><div class="mono">INMOBILIARIO</div><h4>Generación de leads</h4><p>Meta Ads — estructura.</p></div><div class="view-badge">→</div></div>
+        </div>
+        <div class="media-card">
+          <div class="media-embed">[ CAPTURA / MOCKUP ]</div>
+          <div class="cap"><div class="txt"><div class="mono">CUIDADO PERSONAL</div><h4>Campaña de conversión</h4><p>Segmentación y optimización.</p></div><div class="view-badge">→</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="casos">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="pill-eyebrow mono">CASOS DE ÉXITO</div>
+      <h2>Resultados en paid media</h2>
+      <p class="sec-sub">Cifras de ejemplo — sustituye por métricas reales y anonimizadas.</p>
+    </div>
+    <div class="case-grid">
+      <div class="case"><div class="metric mono">+42%</div><div class="metric-label">leads mes contra mes</div><p>Desarrolladora inmobiliaria.</p></div>
+      <div class="case"><div class="metric mono">-28%</div><div class="metric-label">costo por resultado</div><p>Marca de cuidado personal.</p></div>
+      <div class="case"><div class="metric mono">3.2x</div><div class="metric-label">retorno sobre inversión</div><p>Manufactura de queratina.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="contacto" style="padding-top:0;">
+  <div class="contact-box">
+    <div>
+      <h2>Hablemos de tu próximo proyecto.</h2>
+    </div>
+    <div class="contact-links mono">
+      <a href="https://wa.me/528126294186">WhatsApp — +52 812 629 4186</a>
+      <a href="mailto:contacto@josereyesluna.com">contacto@josereyesluna.com</a>
+      <a href="https://josereyesfotografomty.smugmug.com" target="_blank">Fotografía completa →</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <span>© 2026 José Reyes Luna</span>
+  <span class="mono">Monterrey, N.L., México</span>
+</footer>
+
+<script>
+  const navToggle = document.getElementById('navToggle');
+  const mobilePanel = document.getElementById('mobilePanel');
+  navToggle.addEventListener('click', () => {
+    const isOpen = mobilePanel.classList.toggle('open');
+    navToggle.setAttribute('aria-expanded', isOpen);
+    navToggle.setAttribute('aria-label', isOpen ? 'Cerrar menú' : 'Abrir menú');
+  });
+  mobilePanel.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      mobilePanel.classList.remove('open');
+      navToggle.setAttribute('aria-expanded', 'false');
+      navToggle.setAttribute('aria-label', 'Abrir menú');
+    });
+  });
+
+  document.querySelectorAll('.tab-btn').forEach(btn=>{
+    btn.addEventListener('click',()=>{
+      document.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active'));
+      document.querySelectorAll('.tab-panel').forEach(p=>p.classList.remove('active'));
+      btn.classList.add('active');
+      document.getElementById(btn.dataset.tab).classList.add('active');
+    });
+  });
+</script>
+
+</body>
+</html>
