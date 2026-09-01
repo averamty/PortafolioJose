@@ -147,11 +147,20 @@
     transition:filter .4s ease;
   }
   .media-card:hover .media-embed{filter:grayscale(0);}
+  .media-embed.has-video{padding:0;background:#000;}
+  .media-embed.has-video iframe{width:100%;height:100%;border:0;display:block;}
   .media-card .cap{padding:20px 22px;display:flex;justify-content:space-between;align-items:center;gap:12px;}
   .media-card .cap .txt .mono{font-size:0.7rem;color:var(--terracota);}
   .media-card .cap h4{font-size:1rem;margin:6px 0 3px;font-weight:600;}
   .media-card .cap p{font-size:0.83rem;color:var(--muted);}
   .view-badge{flex-shrink:0;width:38px;height:38px;border-radius:50%;background:var(--terracota);color:var(--ink);display:flex;align-items:center;justify-content:center;font-size:0.9rem;}
+
+  .photo-cta{display:flex;justify-content:space-between;align-items:center;gap:24px;background:var(--card);border:1px solid var(--line);border-radius:var(--r-lg);padding:36px 32px;transition:border-color .15s,background .15s;}
+  .photo-cta:hover{border-color:var(--terracota);background:#241E1A;}
+  .photo-cta .mono{font-size:0.72rem;color:var(--terracota);}
+  .photo-cta h4{font-size:1.15rem;margin:8px 0 4px;font-weight:600;}
+  .photo-cta p{font-size:0.9rem;color:var(--muted);}
+  @media(max-width:520px){.photo-cta{flex-direction:column;align-items:flex-start;text-align:left;}}
 
   /* ---- casos de exito ---- */
   .case-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:36px;}
@@ -268,38 +277,40 @@
     <div class="sec-head">
       <div class="pill-eyebrow mono">PORTAFOLIO</div>
       <h2>Contenido en acción</h2>
-      <p class="sec-sub">Sustituye cada placeholder por tus álbumes de SmugMug y videos "no listados" de YouTube/Vimeo.</p>
+      <p class="sec-sub">Video institucional y fotografía en vivo. Los ejemplos de Paid Media se agregarán próximamente.</p>
     </div>
     <div class="tabs">
       <button class="tab-btn active" data-tab="institucional">Institucional</button>
-      <button class="tab-btn" data-tab="fotografia">Fotografía / Reels</button>
+      <button class="tab-btn" data-tab="fotografia">Fotografía</button>
       <button class="tab-btn" data-tab="paidmedia">Paid Media</button>
     </div>
 
     <div class="tab-panel active" id="institucional">
       <div class="media-grid">
         <div class="media-card">
-          <div class="media-embed">[ EMBED YOUTUBE/VIMEO ]<br>Video generación Escuela Cruz Roja</div>
-          <div class="cap"><div class="txt"><div class="mono">CRUZ ROJA NL</div><h4>Graduación — Escuela</h4><p>Guion y dirección.</p></div><div class="view-badge">→</div></div>
+          <div class="media-embed has-video">
+            <iframe src="https://www.youtube.com/embed/6oLKbLzNtfk" title="Graduación — video institucional" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <div class="cap"><div class="txt"><div class="mono">INSTITUCIONAL</div><h4>Graduación</h4><p>Guion y dirección.</p></div><div class="view-badge">→</div></div>
         </div>
         <div class="media-card">
-          <div class="media-embed">[ EMBED YOUTUBE/VIMEO ]<br>Cierre campamento Salud en Acción</div>
-          <div class="cap"><div class="txt"><div class="mono">CRUZ ROJA NL</div><h4>Salud en Acción</h4><p>Voz en off y edición.</p></div><div class="view-badge">→</div></div>
+          <div class="media-embed has-video">
+            <iframe src="https://www.youtube.com/embed/r_hNC6uSmQQ" title="Video institucional" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <div class="cap"><div class="txt"><div class="mono">INSTITUCIONAL</div><h4>Video institucional</h4><p>Producción y edición.</p></div><div class="view-badge">→</div></div>
         </div>
       </div>
     </div>
 
     <div class="tab-panel" id="fotografia">
-      <div class="media-grid">
-        <div class="media-card">
-          <div class="media-embed">[ ÁLBUM SMUGMUG ]<br>Selección de boda</div>
-          <div class="cap"><div class="txt"><div class="mono">BODAS</div><h4>Cobertura de boda</h4><p>Fotógrafo principal.</p></div><div class="view-badge">→</div></div>
+      <a class="photo-cta" href="https://josereyesfotografomty.smugmug.com/" target="_blank" rel="noopener">
+        <div class="photo-txt">
+          <div class="mono">FOTOGRAFÍA</div>
+          <h4>Portafolio completo en SmugMug</h4>
+          <p>Bodas y eventos — todos los álbumes, en un solo lugar.</p>
         </div>
-        <div class="media-card">
-          <div class="media-embed">[ REEL / ÁLBUM ]<br>Highlights de evento</div>
-          <div class="cap"><div class="txt"><div class="mono">EVENTOS</div><h4>Reel de highlights</h4><p>Formato vertical.</p></div><div class="view-badge">→</div></div>
-        </div>
-      </div>
+        <div class="view-badge">→</div>
+      </a>
     </div>
 
     <div class="tab-panel" id="paidmedia">
