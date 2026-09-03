@@ -3,9 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>José Reyes Luna — Producción Audiovisual & Paid Media</title>
-<meta name="description" content="José Reyes Luna — director creativo en Monterrey. Producción audiovisual, fotografía de eventos y estrategia de Paid Media (Meta Ads) para marcas e instituciones.">
-<meta property="og:title" content="José Reyes Luna — Producción Audiovisual & Paid Media">
+<title>José Luis Reyes Luna — Producción Audiovisual & Paid Media</title>
+<meta name="description" content="José Luis Reyes Luna — director creativo en Monterrey. Producción audiovisual, fotografía de eventos y estrategia de Paid Media (Meta Ads) para marcas e instituciones.">
+<meta property="og:title" content="José Luis Reyes Luna — Producción Audiovisual & Paid Media">
 <meta property="og:description" content="Produzco el video y opero la pauta: contenido pensado, desde el guion, para funcionar en Meta Ads.">
 <meta property="og:type" content="website">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='24' fill='%23121010'/%3E%3Ctext x='50' y='68' font-size='58' font-family='sans-serif' font-weight='700' fill='%23D97748' text-anchor='middle'%3EJ%3C/text%3E%3C/svg%3E">
@@ -132,9 +132,29 @@
   .service.featured .badge{background:rgba(18,16,16,0.12);}
 
   /* ---- portafolio: tiles redondeados ---- */
-  .tabs{display:flex;gap:8px;margin-bottom:36px;flex-wrap:wrap;}
-  .tab-btn{padding:10px 20px;border:1px solid var(--line);border-radius:var(--r-pill);font-size:0.85rem;background:transparent;cursor:pointer;font-family:inherit;color:var(--muted);}
-  .tab-btn.active{background:var(--paper);color:var(--ink);border-color:var(--paper);}
+  .tabs{display:flex;gap:14px;margin-bottom:40px;flex-wrap:wrap;}
+  .tab-btn{
+    display:flex;align-items:center;gap:10px;
+    padding:16px 28px;
+    border:1px solid rgba(242,236,228,0.14);
+    border-radius:20px;
+    font-size:0.95rem;font-weight:600;
+    background:rgba(242,236,228,0.05);
+    backdrop-filter:blur(20px) saturate(160%);
+    -webkit-backdrop-filter:blur(20px) saturate(160%);
+    box-shadow:0 8px 24px rgba(0,0,0,0.25), inset 0 1px 0 rgba(255,255,255,0.06);
+    cursor:pointer;font-family:inherit;color:rgba(242,236,228,0.75);
+    transition:all .25s cubic-bezier(.4,0,.2,1);
+  }
+  .tab-btn:hover{background:rgba(242,236,228,0.09);border-color:rgba(242,236,228,0.24);color:var(--paper);transform:translateY(-2px);}
+  .tab-btn .tab-icon{font-size:1.15rem;line-height:1;}
+  .tab-btn.active{
+    background:linear-gradient(135deg, rgba(217,119,72,0.95), rgba(143,74,46,0.9));
+    color:#fff;border-color:rgba(217,119,72,0.6);
+    box-shadow:0 10px 30px rgba(217,119,72,0.35), inset 0 1px 0 rgba(255,255,255,0.25);
+    transform:translateY(-1px);
+  }
+  @media(max-width:640px){.tab-btn{padding:13px 20px;font-size:0.85rem;}}
   .tab-panel{display:none;}
   .tab-panel.active{display:block;}
   .media-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;}
@@ -162,6 +182,17 @@
   .photo-cta p{font-size:0.9rem;color:var(--muted);}
   @media(max-width:520px){.photo-cta{flex-direction:column;align-items:flex-start;text-align:left;}}
 
+  .paidmedia-card{background:var(--card);border:1px solid var(--line);border-radius:var(--r-lg);padding:40px 36px;}
+  .pm-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:28px;}
+  @media(max-width:900px){.pm-stats{grid-template-columns:repeat(2,1fr);}}
+  @media(max-width:520px){.pm-stats{grid-template-columns:1fr;}}
+  .pm-tags{display:flex;flex-wrap:wrap;gap:10px;margin-top:32px;padding-top:28px;border-top:1px solid var(--line);}
+  .pm-tags span{padding:8px 16px;border-radius:var(--r-pill);border:1px solid rgba(217,119,72,0.35);color:var(--terracota);font-size:0.76rem;font-family:'IBM Plex Mono',monospace;}
+
+  .reel-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px;}
+  .reel-card{border-radius:var(--r-lg);overflow:hidden;background:var(--card);border:1px solid var(--line);padding:12px;display:flex;justify-content:center;}
+  .reel-card blockquote.instagram-media{margin:0 !important;}
+
   /* ---- casos de exito ---- */
   .case-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:36px;}
   @media(max-width:760px){.case-grid{grid-template-columns:1fr;}}
@@ -185,7 +216,7 @@
 
 <header>
   <nav class="wrap">
-    <div class="brand">JOSÉ REYES LUNA <span class="mono">/ audiovisual + paid media</span></div>
+    <div class="brand">JOSÉ LUIS REYES LUNA <span class="mono">/ audiovisual + paid media</span></div>
     <div class="navlinks">
       <a href="#sobre-mi">Sobre mí</a>
       <a href="#servicios">Servicios</a>
@@ -228,12 +259,16 @@
 
 <div class="trust">
   <div class="wrap">
-    <div class="trust-label mono">Trabajo con</div>
+    <div class="trust-label mono">Marcas y clientes gestionados</div>
     <div class="trust-row">
-      <span>Vioré Media</span>
-      <span>Cofilms</span>
-      <span>Cruz Roja Mexicana — Delegación N.L.</span>
-      <span>Tecmilenio</span>
+      <span>Bienes Raíces Ciro</span>
+      <span>Cosalka</span>
+      <span>Keramex</span>
+      <span>AC Solar</span>
+      <span>Cruz Roja Nuevo León</span>
+      <span>Adrian Lobo Arquitectos</span>
+      <span>De Leon Arquitectos</span>
+      <span>ENTR ARQ</span>
     </div>
   </div>
 </div>
@@ -242,7 +277,7 @@
   <div class="wrap">
     <div class="about-wordmark">SOBRE MÍ</div>
     <div class="about-grid">
-      <div class="about-photo"><img src="assets/jose-portrait.webp" alt="José Reyes Luna" loading="lazy"></div>
+      <div class="about-photo"><img src="assets/jose-portrait.webp" alt="José Luis Reyes Luna" loading="lazy"></div>
       <div class="about-text">
         <p>Soy director creativo y de marketing con base en Monterrey. Fundé Vioré Media, agencia de marketing digital en alianza con Cofilms, donde llevo pauta en Meta Ads, producción de contenido y estrategia para desarrolladoras inmobiliarias, firmas de arquitectura y marcas de consumo.</p>
         <p>En paralelo, colaboro con Cruz Roja Mexicana Delegación Nuevo León en su estrategia institucional de contenido, y curso la Licenciatura en Mercadotecnia en Tecmilenio.</p>
@@ -277,12 +312,13 @@
     <div class="sec-head">
       <div class="pill-eyebrow mono">PORTAFOLIO</div>
       <h2>Contenido en acción</h2>
-      <p class="sec-sub">Video institucional y fotografía en vivo. Los ejemplos de Paid Media se agregarán próximamente.</p>
+      <p class="sec-sub">Institucional, fotografía, paid media y reels — todo en un solo lugar.</p>
     </div>
     <div class="tabs">
-      <button class="tab-btn active" data-tab="institucional">Institucional</button>
-      <button class="tab-btn" data-tab="fotografia">Fotografía</button>
-      <button class="tab-btn" data-tab="paidmedia">Paid Media</button>
+      <button class="tab-btn active" data-tab="institucional"><span class="tab-icon">🎬</span> Institucional</button>
+      <button class="tab-btn" data-tab="fotografia"><span class="tab-icon">📷</span> Fotografía</button>
+      <button class="tab-btn" data-tab="paidmedia"><span class="tab-icon">📈</span> Paid Media</button>
+      <button class="tab-btn" data-tab="reels"><span class="tab-icon">🎞️</span> Reels</button>
     </div>
 
     <div class="tab-panel active" id="institucional">
@@ -314,14 +350,44 @@
     </div>
 
     <div class="tab-panel" id="paidmedia">
-      <div class="media-grid">
-        <div class="media-card">
-          <div class="media-embed">[ CAPTURA / MOCKUP ]</div>
-          <div class="cap"><div class="txt"><div class="mono">INMOBILIARIO</div><h4>Generación de leads</h4><p>Meta Ads — estructura.</p></div><div class="view-badge">→</div></div>
+      <div class="paidmedia-card">
+        <div class="pm-stats">
+          <div class="stat"><div class="num mono">$700K+</div><div class="label">pesos gestionados en pauta publicitaria de Meta Ads</div></div>
+          <div class="stat"><div class="num mono">3+</div><div class="label">años de experiencia específica en paid media / Meta Ads</div></div>
+          <div class="stat"><div class="num mono">8+</div><div class="label">marcas y cuentas gestionadas activamente en Meta Ads</div></div>
+          <div class="stat"><div class="num mono">6</div><div class="label">industrias: bienes raíces, belleza, manufactura, energía, arquitectura y salud</div></div>
         </div>
-        <div class="media-card">
-          <div class="media-embed">[ CAPTURA / MOCKUP ]</div>
-          <div class="cap"><div class="txt"><div class="mono">CUIDADO PERSONAL</div><h4>Campaña de conversión</h4><p>Segmentación y optimización.</p></div><div class="view-badge">→</div></div>
+        <div class="pm-tags">
+          <span>Meta Ads Manager</span>
+          <span>Meta Business Suite</span>
+          <span>WhatsApp Cloud API</span>
+          <span>Dashboards de performance</span>
+          <span>Producción de contenido con IA</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="tab-panel" id="reels">
+      <div class="reel-grid">
+        <div class="reel-card">
+          <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DZgMpKTFV5E/" data-instgrm-version="14" style="max-width:340px;width:100%;">
+            <a href="https://www.instagram.com/reel/DZgMpKTFV5E/" target="_blank" rel="noopener">Ver reel en Instagram</a>
+          </blockquote>
+        </div>
+        <div class="reel-card">
+          <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DZDvz0-DaJM/" data-instgrm-version="14" style="max-width:340px;width:100%;">
+            <a href="https://www.instagram.com/reel/DZDvz0-DaJM/" target="_blank" rel="noopener">Ver reel en Instagram</a>
+          </blockquote>
+        </div>
+        <div class="reel-card">
+          <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DXKbvlPEr1S/" data-instgrm-version="14" style="max-width:340px;width:100%;">
+            <a href="https://www.instagram.com/reel/DXKbvlPEr1S/" target="_blank" rel="noopener">Ver reel en Instagram</a>
+          </blockquote>
+        </div>
+        <div class="reel-card">
+          <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DaTBZ47pY_0/" data-instgrm-version="14" style="max-width:340px;width:100%;">
+            <a href="https://www.instagram.com/reel/DaTBZ47pY_0/" target="_blank" rel="noopener">Ver reel en Instagram</a>
+          </blockquote>
         </div>
       </div>
     </div>
@@ -357,7 +423,7 @@
 </section>
 
 <footer>
-  <span>© 2026 José Reyes Luna</span>
+  <span>© 2026 José Luis Reyes Luna</span>
   <span class="mono">Monterrey, N.L., México</span>
 </footer>
 
@@ -383,9 +449,13 @@
       document.querySelectorAll('.tab-panel').forEach(p=>p.classList.remove('active'));
       btn.classList.add('active');
       document.getElementById(btn.dataset.tab).classList.add('active');
+      if (btn.dataset.tab === 'reels' && window.instgrm) {
+        window.instgrm.Embeds.process();
+      }
     });
   });
 </script>
+<script async src="https://www.instagram.com/embed.js"></script>
 
 </body>
 </html>
