@@ -4,264 +4,317 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>José Luis Reyes Luna — Producción Audiovisual & Paid Media</title>
-<meta name="description" content="José Luis Reyes Luna — director creativo en Monterrey. Producción audiovisual, fotografía de eventos y estrategia de Paid Media (Meta Ads) para marcas e instituciones.">
+<meta name="description" content="José Luis Reyes Luna — director creativo en Monterrey. Reels, producción audiovisual, fotografía de eventos y estrategia de Paid Media (Meta Ads).">
 <meta property="og:title" content="José Luis Reyes Luna — Producción Audiovisual & Paid Media">
 <meta property="og:description" content="Produzco el video y opero la pauta: contenido pensado, desde el guion, para funcionar en Meta Ads.">
 <meta property="og:type" content="website">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='24' fill='%23121010'/%3E%3Ctext x='50' y='68' font-size='58' font-family='sans-serif' font-weight='700' fill='%23D97748' text-anchor='middle'%3EJ%3C/text%3E%3C/svg%3E">
+<meta name="theme-color" content="#F3F4F6">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='50' fill='%230F1115'/%3E%3Ctext x='50' y='63' font-size='38' font-family='sans-serif' font-weight='600' fill='%23fff' text-anchor='middle'%3EJL%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap" rel="stylesheet">
-<link href="https://api.fontshare.com/v2/css?f[]=general-sans@400,500,600,700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300;400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
   :root{
-    --ink:#1A1611;
-    --ink-soft:#3A332C;
-    --card:#FFFFFF;
-    --card-soft:#ECE4D6;
-    --paper:#F5F1E9;
-    --paper-deep:#EDE5D4;
-    --muted:#77705F;
-    --line:rgba(26,22,17,0.10);
-    --terracota:#C4602E;
-    --terracota-deep:#8F4A2E;
-    --ink-btn:#1A1611;
-    --r-lg:32px;
-    --r-md:20px;
-    --r-pill:999px;
+    --bg:#F3F4F6;
+    --surface:#FFFFFF;
+    --surface-2:#ECEEF2;
+    --ink:#0F1115;
+    --ink-2:#3A404A;
+    --muted:#7A808A;
+    --line:rgba(15,17,21,0.08);
+    --line-2:rgba(15,17,21,0.14);
+    --accent:#3A6EA5;
+    --r-xl:32px;
+    --r-lg:24px;
+    --shadow-soft:0 1px 2px rgba(15,17,21,0.04),0 8px 24px rgba(15,17,21,0.06);
+    --sky:linear-gradient(165deg,#3D6C9C 0%,#6893C0 46%,#B3CCE5 100%);
   }
   *{box-sizing:border-box;margin:0;padding:0;}
   html{scroll-behavior:smooth;}
-  @media (prefers-reduced-motion: reduce){html{scroll-behavior:auto;}}
-  body{background:var(--paper);color:var(--ink);font-family:'General Sans',sans-serif;line-height:1.55;-webkit-font-smoothing:antialiased;}
-  .mono{font-family:'IBM Plex Mono',monospace;}
-  .serif{font-family:'Fraunces',serif;}
+  body{background:var(--bg);color:var(--ink);font-family:'Inter',system-ui,sans-serif;font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden;}
+  img{display:block;max-width:100%;}
   a{color:inherit;text-decoration:none;}
-  .wrap{max-width:1180px;margin:0 auto;padding:0 24px;}
-  section{padding:96px 0;}
-  @media(max-width:640px){section{padding:64px 0;}}
+  button{font:inherit;color:inherit;}
+  .wrap{max-width:1200px;margin:0 auto;padding:0 24px;}
+  section{padding:120px 0;}
+  @media(max-width:760px){section{padding:80px 0;}}
+  h1,h2,h3,h4{font-family:'Inter Tight','Inter',sans-serif;font-weight:300;letter-spacing:-0.035em;line-height:1.04;}
+  h1 strong,h2 strong{font-weight:500;}
+  .accent{color:var(--accent);}
+  .icon{width:18px;height:18px;flex-shrink:0;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round;}
+  .sicon{height:11px;width:auto;fill:currentColor;}
 
-  /* ---- nav ---- */
-  header{position:sticky;top:0;z-index:50;background:rgba(245,241,233,0.85);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);}
-  nav.wrap{display:flex;justify-content:space-between;align-items:center;padding:16px 24px;}
-  .brand{font-weight:600;font-size:0.98rem;letter-spacing:0.01em;color:var(--ink);}
-  .brand .mono{color:var(--terracota-deep);font-size:0.75rem;}
-  .navlinks{display:none;gap:8px;font-size:0.85rem;}
-  .navlinks a{padding:9px 16px;border-radius:var(--r-pill);opacity:0.7;transition:all .15s;color:var(--ink);}
-  .navlinks a:hover{opacity:1;background:var(--card);}
-  @media(min-width:760px){.navlinks{display:flex;}}
-  .nav-right{display:flex;align-items:center;gap:10px;}
-  .nav-cta{padding:9px 18px;border-radius:var(--r-pill);background:var(--ink-btn);color:var(--paper);font-size:0.85rem;font-weight:600;transition:background .15s;}
-  .nav-cta:hover{background:var(--terracota-deep);}
-
-  /* ---- mobile menu ---- */
-  .nav-toggle{display:flex;flex-direction:column;justify-content:center;gap:4px;width:38px;height:38px;border-radius:var(--r-pill);border:1px solid var(--line);background:transparent;cursor:pointer;padding:0;align-items:center;}
-  @media(min-width:760px){.nav-toggle{display:none;}}
-  .nav-toggle span{display:block;width:16px;height:2px;background:var(--ink);border-radius:2px;transition:transform .2s ease,opacity .2s ease;}
-  .nav-toggle[aria-expanded="true"] span:nth-child(1){transform:translateY(6px) rotate(45deg);}
+  /* ---- header ---- */
+  .site-header{position:sticky;top:0;z-index:60;padding:12px 16px 0;}
+  .nav-shell{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:7px 7px 7px 10px;background:rgba(255,255,255,0.72);backdrop-filter:blur(16px) saturate(170%);-webkit-backdrop-filter:blur(16px) saturate(170%);border:1px solid rgba(255,255,255,0.9);border-radius:999px;box-shadow:0 1px 2px rgba(15,17,21,0.04),0 10px 30px -12px rgba(15,17,21,0.14);}
+  .brand{display:flex;align-items:center;gap:10px;font-weight:600;font-size:15px;letter-spacing:-0.01em;line-height:1.2;}
+  .brand small{display:block;font-size:12px;font-weight:400;color:var(--muted);letter-spacing:0;}
+  @media(max-width:560px){.brand small{display:none;}}
+  .logo-mark{width:36px;height:36px;border-radius:50%;background:var(--ink);color:#fff;display:grid;place-items:center;font-family:'Inter Tight',sans-serif;font-weight:600;font-size:13px;flex-shrink:0;}
+  .navlinks{display:none;gap:2px;}
+  .navlinks a{padding:9px 14px;border-radius:999px;font-size:14px;color:var(--ink-2);transition:background .2s,color .2s;}
+  .navlinks a:hover{background:var(--surface-2);color:var(--ink);}
+  @media(min-width:980px){.navlinks{display:flex;}}
+  .nav-right{display:flex;align-items:center;gap:8px;}
+  .nav-toggle{width:40px;height:40px;border-radius:50%;border:1px solid var(--line-2);background:#fff;cursor:pointer;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;}
+  .nav-toggle span{display:block;width:15px;height:1.6px;background:var(--ink);border-radius:2px;transition:transform .2s,opacity .2s;}
+  .nav-toggle[aria-expanded="true"] span:nth-child(1){transform:translateY(5.6px) rotate(45deg);}
   .nav-toggle[aria-expanded="true"] span:nth-child(2){opacity:0;}
-  .nav-toggle[aria-expanded="true"] span:nth-child(3){transform:translateY(-6px) rotate(-45deg);}
-  .mobile-panel{display:none;flex-direction:column;gap:4px;padding:8px 24px 20px;border-bottom:1px solid var(--line);background:var(--paper);}
+  .nav-toggle[aria-expanded="true"] span:nth-child(3){transform:translateY(-5.6px) rotate(-45deg);}
+  @media(min-width:980px){.nav-toggle{display:none;}}
+  .mobile-panel{display:none;flex-direction:column;max-width:1200px;margin:8px auto 0;padding:8px;background:rgba(255,255,255,0.94);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border:1px solid rgba(255,255,255,0.9);border-radius:24px;box-shadow:0 20px 40px -20px rgba(15,17,21,0.25);}
   .mobile-panel.open{display:flex;}
-  .mobile-panel a{padding:12px 16px;border-radius:var(--r-md);font-size:0.95rem;opacity:0.75;color:var(--ink);}
-  .mobile-panel a:hover{opacity:1;background:var(--card);}
-  @media(min-width:760px){.mobile-panel{display:none !important;}}
+  .mobile-panel a{padding:13px 16px;border-radius:16px;font-size:15px;}
+  .mobile-panel a:hover{background:var(--surface-2);}
+  @media(min-width:980px){.mobile-panel{display:none !important;}}
+
+  /* ---- buttons ---- */
+  .btn{display:inline-flex;align-items:center;gap:14px;border-radius:999px;font-size:15px;font-weight:500;white-space:nowrap;transition:background .25s ease,box-shadow .25s ease;}
+  .btn .btn-dot{width:36px;height:36px;border-radius:50%;display:grid;place-items:center;transition:transform .35s cubic-bezier(.2,.7,.2,1);}
+  .btn .btn-dot .icon{width:16px;height:16px;}
+  .btn:hover .btn-dot{transform:rotate(-45deg);}
+  .btn-dark{background:var(--ink);color:#fff;padding:6px 6px 6px 22px;}
+  .btn-dark .btn-dot{background:#fff;color:var(--ink);}
+  .btn-dark:hover{background:#252931;}
+  .btn-light{background:#fff;color:var(--ink);padding:6px 6px 6px 22px;box-shadow:0 12px 28px -12px rgba(10,30,60,0.45);}
+  .btn-light .btn-dot{background:var(--ink);color:#fff;}
+  .btn-glass{padding:15px 24px;color:#fff;background:rgba(255,255,255,0.14);border:1px solid rgba(255,255,255,0.42);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);}
+  .btn-glass:hover{background:rgba(255,255,255,0.24);}
+  .btn-sm{font-size:14px;padding:5px 5px 5px 16px;gap:10px;}
+  .btn-sm .btn-dot{width:30px;height:30px;}
+
+  /* ---- phone mockup ---- */
+  .phone{position:relative;background:#0A0B0D;border-radius:48px;padding:10px;box-shadow:0 40px 80px -28px rgba(8,25,50,0.55),inset 0 0 0 1.5px rgba(255,255,255,0.14),inset 0 0 0 4px #1B1D21;}
+  .island{position:absolute;top:20px;left:50%;transform:translateX(-50%);width:88px;height:26px;border-radius:20px;background:#000;z-index:5;}
+  .phone-screen{position:relative;border-radius:38px;overflow:hidden;background:#fff;display:flex;flex-direction:column;}
+  .status{height:46px;flex-shrink:0;display:flex;align-items:center;justify-content:space-between;padding:4px 26px 0 32px;font-size:14px;font-weight:600;color:#0A0B0D;}
+  .status.dark{color:#fff;}
+  .status-icons{display:flex;gap:5px;align-items:center;}
+  .phone-body{flex:1;min-height:0;display:flex;flex-direction:column;overflow-y:auto;overflow-x:hidden;scrollbar-width:none;}
+  .phone-body::-webkit-scrollbar{display:none;}
+  .phone-body > *{flex-shrink:0;}
+  .phone-body blockquote.instagram-media{flex:1;display:flex;margin:0;border:0;}
+  .phone-body blockquote.instagram-media > a{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;padding:24px;text-align:center;font-size:14px;font-weight:500;color:#fff;background:radial-gradient(70% 50% at 80% 10%,rgba(255,255,255,0.18),transparent 70%),linear-gradient(165deg,#1C2633 0%,#36577D 100%);}
+  .phone-body iframe.instagram-media{min-width:0 !important;width:100% !important;max-width:none !important;margin:0 !important;border:0 !important;border-radius:0 !important;box-shadow:none !important;}
+  .play-circle{width:58px;height:58px;border-radius:50%;background:rgba(255,255,255,0.18);border:1px solid rgba(255,255,255,0.42);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);display:grid;place-items:center;}
+  .play-circle .icon{width:20px;height:20px;margin-left:3px;}
 
   /* ---- hero ---- */
-  .hero{
-    position:relative;min-height:86vh;display:flex;align-items:flex-end;
-    background:
-      radial-gradient(120% 90% at 75% 10%, rgba(196,96,46,0.14) 0%, transparent 55%),
-      radial-gradient(90% 70% at 10% 90%, rgba(143,74,46,0.10) 0%, transparent 60%),
-      linear-gradient(180deg, #FAF7F0 0%, #F0E8D8 100%);
-    overflow:hidden;margin:16px;border-radius:var(--r-lg);border:1px solid var(--line);
+  .hero-wrap{padding:16px 16px 0;}
+  .hero{position:relative;overflow:hidden;max-width:1400px;margin:0 auto;border-radius:var(--r-xl);background:var(--sky);color:#fff;}
+  .hero::before,.contact-band::before{content:'';position:absolute;inset:0;pointer-events:none;background:radial-gradient(55% 45% at 88% 8%,rgba(255,255,255,0.38),transparent 70%),radial-gradient(50% 45% at 0% 100%,rgba(20,50,90,0.35),transparent 70%);}
+  .hero::after,.contact-band::after{content:'';position:absolute;inset:0;pointer-events:none;filter:url(#grain);opacity:0.08;mix-blend-mode:overlay;}
+  .hero-grid{position:relative;z-index:1;max-width:1200px;margin:0 auto;padding:88px 48px 80px;display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center;}
+  .live-pill{display:inline-flex;align-items:center;gap:9px;padding:7px 14px;border-radius:999px;background:rgba(255,255,255,0.16);border:1px solid rgba(255,255,255,0.36);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);font-size:13px;margin-bottom:28px;}
+  .live-dot{width:7px;height:7px;border-radius:50%;background:#7CF0B0;box-shadow:0 0 0 4px rgba(124,240,176,0.25);}
+  .hero h1{font-size:clamp(2.7rem,4.7vw,4.2rem);color:#fff;}
+  .hero h1 strong{font-weight:600;}
+  .hero-lede{margin-top:24px;font-size:18px;line-height:1.55;color:rgba(255,255,255,0.86);max-width:40ch;}
+  .hero-ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:36px;}
+  .hero-meta{display:flex;flex-wrap:wrap;gap:10px 22px;margin-top:48px;font-size:13px;color:rgba(255,255,255,0.78);}
+  .hero-meta span{display:inline-flex;align-items:center;gap:7px;}
+  .hero-meta .icon{width:15px;height:15px;}
+  .hero-visual{position:relative;display:flex;justify-content:center;align-items:center;min-height:680px;}
+  .hero-phone{width:310px;animation:float 8s ease-in-out infinite;}
+  .hero-phone .phone-screen{height:640px;}
+  @keyframes float{0%,100%{transform:translateY(0);}50%{transform:translateY(-10px);}}
+  .float-card{position:absolute;z-index:6;display:flex;align-items:center;gap:12px;padding:12px 18px 12px 12px;border-radius:20px;background:rgba(255,255,255,0.68);backdrop-filter:blur(18px) saturate(170%);-webkit-backdrop-filter:blur(18px) saturate(170%);border:1px solid rgba(255,255,255,0.8);box-shadow:0 22px 44px -18px rgba(12,35,70,0.45);color:var(--ink);animation:float 7s ease-in-out infinite;}
+  .fc-icon{width:40px;height:40px;border-radius:50%;display:grid;place-items:center;color:#fff;flex-shrink:0;}
+  .fc-icon .icon{width:17px;height:17px;}
+  .fc-icon.violet{background:linear-gradient(135deg,#A78BFA,#7C3AED);}
+  .fc-icon.orange{background:linear-gradient(135deg,#FDBA74,#F97316);}
+  .fc-icon.rose{background:linear-gradient(135deg,#FDA4AF,#E11D48);}
+  .float-card > span:last-child{line-height:1.25;}
+  .fc-value{font-family:'Inter Tight',sans-serif;font-size:20px;font-weight:600;letter-spacing:-0.02em;line-height:1.1;}
+  .fc-label{font-size:12px;color:var(--ink-2);line-height:1.3;}
+  .fc-1{left:-6px;top:34%;animation-delay:-2s;}
+  .fc-2{right:-10px;top:14%;animation-delay:-4s;}
+  .fc-3{right:4px;bottom:12%;animation-delay:-1s;}
+  .fc-tag{position:absolute;z-index:6;bottom:20%;left:6%;display:inline-flex;align-items:center;gap:8px;padding:8px 14px;border-radius:999px;background:rgba(15,17,21,0.78);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);color:#fff;font-size:12px;font-weight:600;letter-spacing:0.02em;}
+  .fc-tag i{width:7px;height:7px;border-radius:50%;background:#FF5A5F;box-shadow:0 0 0 4px rgba(255,90,95,0.25);}
+  @media(max-width:980px){
+    .hero-grid{grid-template-columns:1fr;padding:56px 24px 40px;gap:48px;}
+    .hero-visual{min-height:0;display:grid;grid-template-columns:1fr 1fr;gap:12px;}
+    .hero-phone{grid-column:1/-1;justify-self:center;width:min(300px,100%);}
+    .hero-phone .phone-screen{height:600px;}
+    .float-card{position:static;animation:none;}
+    .fc-3{grid-column:1/-1;justify-self:center;}
+    .fc-tag{top:-14px;bottom:auto;left:50%;transform:translateX(-50%);}
   }
-  @media(max-width:640px){.hero{margin:8px;border-radius:24px;}}
-  .photo-note{position:absolute;top:24px;right:24px;z-index:3;font-size:0.66rem;color:rgba(26,22,17,0.4);border:1px dashed rgba(26,22,17,0.25);padding:6px 12px;border-radius:var(--r-pill);max-width:200px;text-align:right;}
-  .hero-inner{position:relative;z-index:2;padding:64px 40px;width:100%;}
-  @media(max-width:640px){.hero-inner{padding:48px 24px;}}
-  .pill-tag{display:inline-flex;align-items:center;gap:8px;padding:8px 16px;border-radius:var(--r-pill);background:var(--card);border:1px solid var(--line);font-size:0.78rem;letter-spacing:0.04em;margin-bottom:24px;color:var(--ink-soft);}
-  .pill-tag .dot{width:6px;height:6px;border-radius:50%;background:var(--terracota);}
-  h1{font-family:'Fraunces',serif;font-size:clamp(2.6rem,7vw,5.2rem);font-weight:600;line-height:1.03;letter-spacing:-0.01em;max-width:15ch;color:var(--ink);}
-  h1 em{font-style:italic;font-weight:500;color:var(--terracota-deep);}
-  .tagline{margin-top:24px;font-size:1.12rem;max-width:44ch;color:var(--ink-soft);}
-  .cta-row{display:flex;flex-wrap:wrap;gap:12px;margin-top:36px;}
-  .btn{display:inline-block;padding:15px 30px;font-size:0.92rem;font-weight:600;border-radius:var(--r-pill);transition:all .15s;}
-  .btn-primary{background:var(--ink-btn);color:var(--paper);}
-  .btn-primary:hover{background:var(--terracota-deep);transform:translateY(-1px);}
-  .btn-ghost{border:1px solid rgba(26,22,17,0.25);color:var(--ink);}
-  .btn-ghost:hover{border-color:var(--terracota-deep);color:var(--terracota-deep);}
-  .stats-row{display:flex;flex-wrap:wrap;gap:36px;margin-top:56px;padding-top:32px;border-top:1px solid var(--line);}
-  .stat .num{font-size:1.7rem;font-weight:700;color:var(--terracota-deep);}
-  .stat .label{font-size:0.78rem;color:var(--muted);margin-top:4px;}
 
-  /* ---- trust strip ---- */
-  .trust{padding:0 0 48px;}
-  .trust-label{font-size:0.72rem;letter-spacing:0.1em;color:var(--muted);margin-bottom:20px;text-transform:uppercase;}
-  .trust-row{display:flex;flex-wrap:wrap;gap:12px;}
-  .trust-row span{padding:9px 18px;border-radius:var(--r-pill);background:var(--card);border:1px solid var(--line);font-size:0.88rem;color:var(--ink-soft);}
+  /* ---- marquee de marcas ---- */
+  .marquee{padding:56px 0 0;}
+  .marquee-label{text-align:center;font-size:13px;color:var(--muted);margin-bottom:22px;}
+  .marquee-viewport{overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent,#000 12%,#000 88%,transparent);mask-image:linear-gradient(90deg,transparent,#000 12%,#000 88%,transparent);}
+  .marquee-track{display:flex;width:max-content;animation:marquee 40s linear infinite;}
+  .marquee-viewport:hover .marquee-track{animation-play-state:paused;}
+  .marquee-track span{display:flex;align-items:center;gap:52px;padding-right:52px;font-family:'Inter Tight',sans-serif;font-size:clamp(18px,2vw,24px);font-weight:500;letter-spacing:-0.02em;color:#9AA1AB;white-space:nowrap;}
+  .marquee-track span::after{content:'';width:6px;height:6px;border-radius:50%;background:#C9CED6;}
+  @keyframes marquee{to{transform:translateX(-50%);}}
 
-  /* ---- section headers ---- */
-  .sec-head{margin-bottom:44px;}
-  .pill-eyebrow{display:inline-block;padding:7px 15px;border-radius:var(--r-pill);background:var(--card);color:var(--terracota-deep);font-size:0.75rem;margin-bottom:16px;border:1px solid var(--line);}
-  h2{font-family:'Fraunces',serif;font-size:clamp(1.8rem,3.8vw,2.5rem);font-weight:600;letter-spacing:-0.01em;color:var(--ink);}
-  .sec-sub{color:var(--muted);max-width:56ch;margin-top:12px;}
+  /* ---- section heads ---- */
+  .sec-head{display:grid;grid-template-columns:1.25fr 1fr;gap:28px 56px;align-items:end;margin-bottom:56px;}
+  .sec-head h2{font-size:clamp(2.3rem,4.8vw,3.8rem);}
+  .sec-side{display:flex;flex-direction:column;align-items:flex-start;gap:22px;}
+  .sec-side p{color:var(--muted);max-width:42ch;}
+  .label-pill{display:inline-flex;align-items:center;gap:9px;padding:5px 14px 5px 5px;border-radius:999px;background:#fff;border:1px solid var(--line);font-size:12px;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;color:var(--ink-2);margin-bottom:22px;}
+  .lp-icon{width:24px;height:24px;border-radius:50%;background:var(--ink);color:#fff;display:grid;place-items:center;}
+  .lp-icon .icon{width:13px;height:13px;}
+  @media(max-width:860px){.sec-head{grid-template-columns:1fr;align-items:start;}}
 
-  /* ---- sobre mi: wordmark style ---- */
-  .about-wordmark{font-family:'Fraunces',serif;font-style:italic;font-size:clamp(3rem,10vw,7rem);font-weight:600;letter-spacing:-0.02em;color:rgba(26,22,17,0.07);line-height:0.85;}
-  .about-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:48px;align-items:center;margin-top:36px;}
-  @media(max-width:760px){.about-grid{grid-template-columns:1fr;}}
-  .about-photo{
-    aspect-ratio:4/5;border-radius:var(--r-lg);
-    background:var(--card-soft);
-    border:1px solid var(--line);overflow:hidden;
+  /* ---- reels ---- */
+  .reels{overflow:hidden;}
+  .reel-nav{display:flex;gap:10px;}
+  .nav-circle{width:48px;height:48px;border-radius:50%;border:1px solid var(--line-2);background:#fff;display:grid;place-items:center;cursor:pointer;transition:background .2s,color .2s;}
+  .nav-circle:hover{background:var(--ink);color:#fff;}
+  .reel-track{display:flex;gap:28px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;padding:8px max(24px,calc((100vw - 1200px)/2 + 24px)) 24px;scroll-padding-left:max(24px,calc((100vw - 1200px)/2 + 24px));}
+  .reel-track::-webkit-scrollbar{display:none;}
+  .reel-item{flex:0 0 auto;width:min(340px,82vw);scroll-snap-align:start;}
+  .reel-item .phone-screen{height:640px;}
+  @media(max-width:600px){.reel-item .phone-screen{height:580px;}}
+  .reel-meta{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-top:18px;padding:0 6px;}
+  .plat{display:inline-flex;align-items:center;gap:8px;font-size:14px;font-weight:500;color:var(--ink-2);}
+  .reel-num{font-family:'Inter Tight',sans-serif;font-size:14px;color:var(--muted);}
+  .ai-badge{display:inline-flex;align-items:center;gap:6px;padding:5px 12px;border-radius:999px;background:linear-gradient(135deg,#6D5DF6,#3A6EA5);color:#fff;font-size:12px;font-weight:600;}
+  .ai-badge .icon{width:14px;height:14px;}
+  .phone-screen.ai{background:#141A2E;}
+  .ai-cover{position:relative;flex:1;display:flex;flex-direction:column;color:#fff;overflow:hidden;}
+  .ai-cover::before{content:'';position:absolute;inset:0;background:radial-gradient(80% 55% at 85% 5%,rgba(167,139,250,0.6),transparent 70%),radial-gradient(70% 50% at 5% 95%,rgba(56,189,248,0.4),transparent 70%),linear-gradient(170deg,#141A2E 0%,#2B2F6B 55%,#3A6EA5 100%);}
+  .ai-cover > *{position:relative;}
+  .ai-chip{align-self:flex-start;margin:12px 20px 0;display:inline-flex;align-items:center;gap:7px;padding:7px 13px;border-radius:999px;background:rgba(255,255,255,0.14);border:1px solid rgba(255,255,255,0.3);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);font-size:12px;font-weight:600;}
+  .ai-chip .icon{width:14px;height:14px;}
+  .ai-spark{flex:1;display:grid;place-items:center;}
+  .ai-spark .icon{width:120px;height:120px;stroke-width:0.8;opacity:0.9;filter:drop-shadow(0 0 24px rgba(167,139,250,0.7));}
+  .ai-body{padding:0 22px 26px;}
+  .ai-body h4{font-size:26px;font-weight:400;line-height:1.1;margin:0 0 8px;}
+  .ai-body p{font-size:14px;color:rgba(255,255,255,0.75);}
+  .ai-link{display:inline-flex;align-items:center;gap:8px;margin-top:18px;padding:10px 16px;border-radius:999px;background:#fff;color:var(--ink);font-size:14px;font-weight:500;transition:gap .25s;}
+  .ai-cover:hover .ai-link{gap:12px;}
+  .ai-link .icon{width:15px;height:15px;}
+
+  /* ---- produccion (bento) ---- */
+  .bento{display:grid;grid-template-columns:1.55fr 1fr;gap:18px;}
+  .video-feature{position:relative;border-radius:var(--r-lg);overflow:hidden;background:#0E1218;cursor:pointer;aspect-ratio:16/9;isolation:isolate;}
+  .video-feature.featured{grid-row:span 2;aspect-ratio:auto;min-height:440px;}
+  .video-thumb{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .7s cubic-bezier(.2,.7,.2,1);}
+  .video-feature:hover .video-thumb{transform:scale(1.04);}
+  .video-scrim{position:absolute;inset:0;background:linear-gradient(0deg,rgba(6,10,16,0.8) 0%,rgba(6,10,16,0.12) 50%,transparent 75%);}
+  .play-btn{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:70px;height:70px;border-radius:50%;background:rgba(255,255,255,0.22);border:1px solid rgba(255,255,255,0.55);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);color:#fff;display:grid;place-items:center;cursor:pointer;z-index:2;transition:transform .3s,background .3s,color .3s;}
+  .video-feature:hover .play-btn{transform:translate(-50%,-50%) scale(1.08);background:rgba(255,255,255,0.95);color:var(--ink);}
+  .play-btn .icon{width:22px;height:22px;margin-left:3px;}
+  .video-caption{position:absolute;left:0;right:0;bottom:0;padding:24px 26px;z-index:2;color:#fff;}
+  .vc-chip{display:inline-flex;padding:5px 11px;border-radius:999px;background:rgba(255,255,255,0.16);border:1px solid rgba(255,255,255,0.3);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);font-size:11px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;}
+  .video-caption h3{font-size:clamp(1.4rem,2.4vw,2rem);font-weight:400;margin:12px 0 4px;}
+  .video-caption p{font-size:14px;color:rgba(255,255,255,0.75);}
+  .video-feature iframe{position:absolute;inset:0;width:100%;height:100%;border:0;z-index:3;}
+  .photo-card{background:#fff;border:1px solid var(--line);border-radius:var(--r-lg);padding:28px;display:flex;flex-direction:column;justify-content:space-between;gap:24px;box-shadow:var(--shadow-soft);}
+  .pc-top{display:flex;justify-content:space-between;align-items:flex-start;gap:16px;}
+  .icon-bubble{width:46px;height:46px;border-radius:50%;background:var(--surface-2);display:grid;place-items:center;}
+  .pc-stat{font-family:'Inter Tight',sans-serif;font-size:46px;font-weight:300;letter-spacing:-0.04em;line-height:1;text-align:right;}
+  .pc-stat small{display:block;margin-top:6px;font-family:'Inter',sans-serif;font-size:13px;letter-spacing:0;color:var(--muted);}
+  .photo-card h3{font-size:24px;font-weight:400;margin-bottom:6px;}
+  .photo-card p{color:var(--muted);font-size:15px;margin-bottom:20px;}
+  @media(max-width:860px){.bento{grid-template-columns:1fr;}.video-feature.featured{grid-row:auto;aspect-ratio:16/10;min-height:0;}}
+
+  /* ---- paid media ---- */
+  .paid{position:relative;}
+  .paid::before{content:'';position:absolute;inset:0;pointer-events:none;background-image:linear-gradient(rgba(15,17,21,0.06) 1px,transparent 1px),linear-gradient(90deg,rgba(15,17,21,0.06) 1px,transparent 1px);background-size:64px 64px;background-position:center top;-webkit-mask-image:radial-gradient(75% 65% at 50% 45%,#000 30%,transparent 80%);mask-image:radial-gradient(75% 65% at 50% 45%,#000 30%,transparent 80%);}
+  .paid > .wrap{position:relative;}
+  .pm-grid{display:grid;grid-template-columns:1fr 1.45fr 1fr 1fr;gap:16px;align-items:end;}
+  .pm-card{background:rgba(255,255,255,0.74);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,0.95);border-radius:var(--r-lg);padding:24px;min-height:330px;display:flex;flex-direction:column;justify-content:space-between;box-shadow:var(--shadow-soft);transition:transform .35s ease,box-shadow .35s ease;}
+  .pm-card:hover{transform:translateY(-6px);box-shadow:0 26px 44px -20px rgba(15,17,21,0.2);}
+  .pm-num{font-family:'Inter Tight',sans-serif;font-size:64px;font-weight:300;letter-spacing:-0.05em;line-height:1;color:#D2D6DC;}
+  .pm-icon{width:32px;height:32px;border-radius:50%;background:var(--ink);color:#fff;display:grid;place-items:center;margin-bottom:14px;}
+  .pm-icon .icon{width:15px;height:15px;}
+  .pm-value{font-family:'Inter Tight',sans-serif;font-size:36px;font-weight:400;letter-spacing:-0.035em;line-height:1;}
+  .pm-label{font-size:14px;color:var(--ink-2);margin-top:10px;line-height:1.45;}
+  .pm-card.featured{background:#fff;padding:10px;min-height:440px;}
+  .pm-visual{position:relative;height:200px;border-radius:18px;overflow:hidden;background:linear-gradient(150deg,#2D5F8F 0%,#5E8FBF 55%,#C7DBEF 100%);}
+  .pm-visual svg{position:absolute;inset:0;width:100%;height:100%;}
+  .pm-body{padding:20px 16px 16px;}
+  .pm-card.featured .pm-value{font-size:48px;}
+  .pm-desc{font-size:14px;color:var(--muted);margin-top:12px;}
+  .tools{display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin-top:44px;}
+  .tools-label{font-size:13px;color:var(--muted);margin-right:6px;}
+  .tool{padding:9px 16px;border-radius:999px;background:#fff;border:1px solid var(--line);font-size:14px;color:var(--ink-2);}
+  @media(max-width:1000px){.pm-grid{grid-template-columns:1fr 1fr;align-items:stretch;}.pm-card.featured{grid-column:1/-1;order:-1;min-height:0;}.pm-card{min-height:250px;}}
+  @media(max-width:560px){.pm-grid{grid-template-columns:1fr;}}
+
+  /* ---- servicios ---- */
+  .svc-list{border-top:1px solid var(--line-2);}
+  .svc-row{display:grid;grid-template-columns:72px minmax(0,1.1fr) minmax(0,1.4fr) 130px 48px;gap:24px;align-items:center;padding:30px 16px;border-bottom:1px solid var(--line-2);transition:background .3s ease;}
+  .svc-row:hover{background:#fff;}
+  .svc-num{font-family:'Inter Tight',sans-serif;font-size:15px;color:var(--muted);}
+  .svc-title{font-family:'Inter Tight',sans-serif;font-size:clamp(1.4rem,2.4vw,1.9rem);font-weight:400;letter-spacing:-0.03em;line-height:1.15;}
+  .svc-desc{color:var(--muted);font-size:15px;}
+  .svc-tag{justify-self:start;padding:6px 12px;border-radius:999px;border:1px solid var(--line-2);font-size:12px;font-weight:500;color:var(--ink-2);white-space:nowrap;}
+  .svc-tag.hot{background:var(--ink);color:#fff;border-color:var(--ink);}
+  .svc-arrow{width:46px;height:46px;border-radius:50%;border:1px solid var(--line-2);display:grid;place-items:center;transition:transform .35s cubic-bezier(.2,.7,.2,1),background .3s,color .3s;}
+  .svc-row:hover .svc-arrow{background:var(--ink);color:#fff;transform:rotate(-45deg);}
+  @media(max-width:860px){
+    .svc-row{grid-template-columns:36px 1fr 46px;gap:8px 14px;padding:24px 6px;}
+    .svc-desc,.svc-tag{grid-column:2/3;}
+    .svc-arrow{grid-row:1;grid-column:3;}
   }
-  .about-photo img{width:100%;height:100%;object-fit:cover;display:block;}
-  .about-text p{margin-bottom:16px;color:var(--ink-soft);}
-  .facts{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px;}
-  .facts .fact-pill{padding:9px 16px;border-radius:var(--r-pill);background:var(--card);font-size:0.82rem;border:1px solid var(--line);color:var(--ink-soft);}
-  .facts .fact-pill b{color:var(--terracota-deep);font-weight:600;}
 
-  /* ---- servicios: cards, uno destacado ---- */
-  .services{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:36px;}
-  @media(max-width:900px){.services{grid-template-columns:repeat(2,1fr);}}
-  @media(max-width:520px){.services{grid-template-columns:1fr;}}
-  .service{background:var(--card);border-radius:var(--r-md);padding:28px 24px;border:1px solid var(--line);box-shadow:0 1px 3px rgba(26,22,17,0.04);}
-  .service.featured{background:var(--ink-btn);color:var(--paper);border-color:var(--ink-btn);}
-  .service .mono{font-size:0.72rem;color:var(--terracota-deep);}
-  .service.featured .mono{color:rgba(245,241,233,0.6);}
-  .service h3{font-size:1.05rem;margin:12px 0 8px;font-weight:600;color:var(--ink);}
-  .service.featured h3{color:var(--paper);}
-  .service p{color:var(--muted);font-size:0.88rem;}
-  .service.featured p{color:rgba(245,241,233,0.7);}
-  .service .badge{display:inline-block;margin-top:14px;padding:6px 13px;border-radius:var(--r-pill);background:var(--card-soft);font-size:0.72rem;color:var(--ink-soft);}
-  .service.featured .badge{background:rgba(245,241,233,0.14);color:var(--paper);}
-
-  /* ---- portafolio: tiles redondeados, glass sobre fondo claro ---- */
-  .tabs{display:flex;gap:14px;margin-bottom:40px;flex-wrap:wrap;}
-  .tab-btn{
-    display:flex;align-items:center;gap:10px;
-    padding:16px 28px;
-    border:1px solid rgba(26,22,17,0.08);
-    border-radius:20px;
-    font-size:0.95rem;font-weight:600;
-    background:rgba(255,255,255,0.55);
-    backdrop-filter:blur(20px) saturate(160%);
-    -webkit-backdrop-filter:blur(20px) saturate(160%);
-    box-shadow:0 8px 24px rgba(26,22,17,0.08), inset 0 1px 0 rgba(255,255,255,0.5);
-    cursor:pointer;font-family:inherit;color:var(--ink-soft);
-    transition:all .25s cubic-bezier(.4,0,.2,1);
-  }
-  .tab-btn:hover{background:rgba(255,255,255,0.8);border-color:rgba(26,22,17,0.16);color:var(--ink);transform:translateY(-2px);}
-  .tab-btn .tab-icon{font-size:1.15rem;line-height:1;}
-  .tab-btn.active{
-    background:linear-gradient(135deg, var(--terracota), var(--terracota-deep));
-    color:#fff;border-color:rgba(143,74,46,0.5);
-    box-shadow:0 10px 30px rgba(196,96,46,0.3), inset 0 1px 0 rgba(255,255,255,0.25);
-    transform:translateY(-1px);
-  }
-  @media(max-width:640px){.tab-btn{padding:13px 20px;font-size:0.85rem;}}
-  .tab-panel{display:none;}
-  .tab-panel.active{display:block;}
-  .view-badge{flex-shrink:0;width:38px;height:38px;border-radius:50%;background:var(--ink-btn);color:var(--paper);display:flex;align-items:center;justify-content:center;}
-  .view-badge .icon{width:16px;height:16px;}
-
-  .photo-cta{display:flex;justify-content:space-between;align-items:center;gap:24px;background:var(--card);border:1px solid var(--line);border-radius:var(--r-lg);padding:36px 32px;transition:border-color .15s,background .15s;box-shadow:0 1px 3px rgba(26,22,17,0.04);}
-  .photo-cta:hover{border-color:var(--terracota);background:var(--card-soft);}
-  .photo-cta .mono{font-size:0.72rem;color:var(--terracota-deep);}
-  .photo-cta h4{font-size:1.15rem;margin:8px 0 4px;font-weight:600;color:var(--ink);}
-  .photo-cta p{font-size:0.9rem;color:var(--muted);}
-  @media(max-width:520px){.photo-cta{flex-direction:column;align-items:flex-start;text-align:left;}}
-
-  .paidmedia-card{background:var(--card);border:1px solid var(--line);border-radius:var(--r-lg);padding:40px 36px;box-shadow:0 1px 3px rgba(26,22,17,0.04);}
-  .pm-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:28px;}
-  @media(max-width:900px){.pm-stats{grid-template-columns:repeat(2,1fr);}}
-  @media(max-width:520px){.pm-stats{grid-template-columns:1fr;}}
-  .pm-tags{display:flex;flex-wrap:wrap;gap:10px;margin-top:32px;padding-top:28px;border-top:1px solid var(--line);}
-  .pm-tags span{padding:8px 16px;border-radius:var(--r-pill);border:1px solid rgba(196,96,46,0.3);background:rgba(196,96,46,0.06);color:var(--terracota-deep);font-size:0.76rem;font-family:'IBM Plex Mono',monospace;}
-
-  .reel-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px;}
-  .reel-card{border-radius:var(--r-lg);overflow:hidden;background:var(--card);border:1px solid var(--line);padding:12px;display:flex;justify-content:center;box-shadow:0 1px 3px rgba(26,22,17,0.04);}
-  .reel-card blockquote.instagram-media{margin:0 !important;}
-  .reel-card a{color:var(--terracota-deep);font-size:0.9rem;padding:20px;}
-
-  /* ---- casos de exito ---- */
-  .case-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:36px;}
-  @media(max-width:760px){.case-grid{grid-template-columns:1fr;}}
-  .case{background:var(--card);border-radius:var(--r-md);padding:30px;border:1px solid var(--line);box-shadow:0 1px 3px rgba(26,22,17,0.04);}
-  .case .metric{font-family:'Fraunces',serif;font-size:2.1rem;font-weight:600;color:var(--terracota-deep);}
-  .case .metric-label{font-size:0.78rem;color:var(--muted);margin:6px 0 14px;}
-  .case p{font-size:0.87rem;color:var(--ink-soft);}
+  /* ---- sobre mi ---- */
+  .about{display:grid;grid-template-columns:0.9fr 1.1fr;gap:64px;align-items:center;}
+  .about-photo{position:relative;border-radius:var(--r-xl);overflow:hidden;aspect-ratio:4/5;background:var(--surface-2);box-shadow:0 30px 60px -32px rgba(15,17,21,0.4);}
+  .about-photo img{width:100%;height:100%;object-fit:cover;}
+  .photo-chip{position:absolute;left:16px;bottom:16px;display:inline-flex;align-items:center;gap:10px;padding:8px 16px 8px 8px;border-radius:999px;background:rgba(255,255,255,0.74);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border:1px solid rgba(255,255,255,0.85);font-size:13px;font-weight:500;}
+  .photo-chip .lp-icon{width:28px;height:28px;}
+  .about-title{font-size:clamp(2rem,3.8vw,3.1rem);margin-bottom:28px;}
+  .about-body p{color:var(--ink-2);margin-bottom:16px;max-width:58ch;}
+  .facts{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px;}
+  .fact{padding:10px 16px;border-radius:999px;background:#fff;border:1px solid var(--line);font-size:14px;color:var(--muted);}
+  .fact b{color:var(--ink);font-weight:600;}
+  @media(max-width:860px){.about{grid-template-columns:1fr;gap:40px;}}
 
   /* ---- contacto ---- */
-  .contact-box{background:var(--ink-btn);color:var(--paper);border-radius:var(--r-lg);padding:56px 40px;margin:0 16px 16px;display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:28px;}
-  @media(max-width:640px){.contact-box{margin:0 8px 8px;padding:40px 24px;}}
-  .contact-box h2{color:var(--paper);}
-  .contact-links{display:flex;flex-direction:column;gap:10px;}
-  .contact-links a{display:inline-block;padding:12px 20px;border-radius:var(--r-pill);background:rgba(245,241,233,0.1);font-size:0.95rem;font-weight:500;transition:background .15s;}
-  .contact-links a:hover{background:rgba(245,241,233,0.18);}
+  .contact{padding:24px 16px 0;}
+  .contact-band{position:relative;overflow:hidden;max-width:1400px;margin:0 auto;border-radius:var(--r-xl);background:var(--sky);color:#fff;}
+  .contact-grid{position:relative;z-index:1;max-width:1200px;margin:0 auto;padding:96px 48px;display:grid;grid-template-columns:1.1fr 1fr;gap:48px;align-items:center;}
+  .contact-band h2{font-size:clamp(2.4rem,5vw,4.2rem);color:#fff;}
+  .contact-band h2 strong{font-weight:600;}
+  .contact-lede{margin-top:20px;color:rgba(255,255,255,0.86);max-width:38ch;font-size:17px;}
+  .contact-links{display:flex;flex-direction:column;gap:12px;}
+  .contact-link{display:flex;align-items:center;gap:14px;padding:14px;border-radius:22px;background:rgba(255,255,255,0.64);backdrop-filter:blur(18px) saturate(170%);-webkit-backdrop-filter:blur(18px) saturate(170%);border:1px solid rgba(255,255,255,0.8);color:var(--ink);box-shadow:0 22px 44px -22px rgba(12,35,70,0.5);transition:transform .3s ease,background .3s ease;}
+  .contact-link:hover{transform:translateX(6px);background:rgba(255,255,255,0.86);}
+  .cl-icon{width:46px;height:46px;border-radius:50%;display:grid;place-items:center;color:#fff;flex-shrink:0;}
+  .cl-icon.green{background:linear-gradient(135deg,#4ADE80,#16A34A);}
+  .cl-icon.violet{background:linear-gradient(135deg,#A78BFA,#7C3AED);}
+  .cl-icon.orange{background:linear-gradient(135deg,#FDBA74,#F97316);}
+  .cl-text{flex:1;min-width:0;}
+  .cl-text b{display:block;font-size:15px;font-weight:600;}
+  .cl-text span{font-size:14px;color:var(--ink-2);overflow-wrap:anywhere;}
+  .cl-arrow{width:38px;height:38px;border-radius:50%;background:var(--ink);color:#fff;display:grid;place-items:center;flex-shrink:0;}
+  .cl-arrow .icon{width:15px;height:15px;}
+  @media(max-width:860px){.contact-grid{grid-template-columns:1fr;padding:64px 24px;}}
 
-  footer{padding:32px 24px;font-size:0.8rem;color:var(--muted);display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;border-top:1px solid var(--line);}
-
-  /* ---- logo mark ---- */
-  .brand-row{display:flex;align-items:center;gap:12px;}
-  .logo-mark{flex-shrink:0;width:36px;height:36px;border-radius:11px;background:var(--ink-btn);color:var(--paper);display:flex;align-items:center;justify-content:center;font-family:'Fraunces',serif;font-weight:600;font-style:italic;font-size:1rem;}
-
-  /* ---- grain texture (hero) ---- */
-  .hero::before{content:'';position:absolute;inset:0;z-index:1;pointer-events:none;filter:url(#grain);opacity:0.05;mix-blend-mode:multiply;}
+  /* ---- footer ---- */
+  .site-footer{padding:72px 0 32px;}
+  .foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:40px;}
+  .foot-brand p{color:var(--muted);font-size:14px;margin-top:16px;max-width:32ch;}
+  .foot-col h4{font-family:'Inter',sans-serif;font-size:14px;font-weight:600;letter-spacing:0;margin-bottom:14px;}
+  .foot-col a{display:block;font-size:14px;color:var(--muted);padding:5px 0;transition:color .2s;}
+  .foot-col a:hover{color:var(--ink);}
+  .foot-bottom{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;margin-top:56px;padding-top:24px;border-top:1px solid var(--line);font-size:13px;color:var(--muted);}
+  @media(max-width:760px){.foot-grid{grid-template-columns:1fr 1fr;}.foot-brand{grid-column:1/-1;}}
 
   /* ---- scroll reveal ---- */
-  .reveal{opacity:0;transform:translateY(26px);transition:opacity .7s cubic-bezier(.2,.7,.2,1),transform .7s cubic-bezier(.2,.7,.2,1);}
+  .reveal{opacity:0;transform:translateY(26px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1);}
   .reveal.in-view{opacity:1;transform:none;}
-  .services .service:nth-child(2){transition-delay:.08s;}
-  .services .service:nth-child(3){transition-delay:.16s;}
-  .services .service:nth-child(4){transition-delay:.24s;}
-  .case-grid .case:nth-child(2){transition-delay:.08s;}
-  .case-grid .case:nth-child(3){transition-delay:.16s;}
-  @media (prefers-reduced-motion: reduce){.reveal{opacity:1 !important;transform:none !important;transition:none !important;}}
+  .pm-grid .reveal:nth-child(2),.reel-track .reveal:nth-child(2){transition-delay:.08s;}
+  .pm-grid .reveal:nth-child(3),.reel-track .reveal:nth-child(3){transition-delay:.16s;}
+  .pm-grid .reveal:nth-child(4),.reel-track .reveal:nth-child(4){transition-delay:.24s;}
 
-  /* ---- icons ---- */
-  .icon{width:18px;height:18px;flex-shrink:0;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;}
-  .tab-btn .icon{width:19px;height:19px;}
-
-  /* ---- card lift + tilt on hover ---- */
-  .service{transition:transform .3s ease,box-shadow .3s ease;}
-  .services .service:nth-child(odd):hover{transform:translateY(-5px) rotate(-0.35deg);box-shadow:0 16px 28px rgba(26,22,17,0.09);}
-  .services .service:nth-child(even):hover{transform:translateY(-5px) rotate(0.35deg);box-shadow:0 16px 28px rgba(26,22,17,0.09);}
-  @media(min-width:901px){
-    .services .service:nth-child(2){margin-top:-14px;}
-    .services .service:nth-child(4){margin-top:14px;}
+  @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto;}
+    .reveal{opacity:1 !important;transform:none !important;transition:none !important;}
+    .hero-phone,.float-card{animation:none;}
+    .marquee-track{animation:none;flex-wrap:wrap;justify-content:center;width:auto;}
+    .marquee-track [aria-hidden="true"]{display:none;}
   }
-  .case{transition:transform .3s ease,box-shadow .3s ease;}
-  .case:hover{transform:translateY(-5px);box-shadow:0 16px 28px rgba(26,22,17,0.09);}
-
-  /* ---- video showcase (institucional) ---- */
-  .video-showcase{display:grid;grid-template-columns:1.4fr 1fr;gap:20px;}
-  @media(max-width:760px){.video-showcase{grid-template-columns:1fr;}}
-  .video-feature{position:relative;border-radius:var(--r-lg);overflow:hidden;aspect-ratio:16/9;background:#111;border:1px solid var(--line);cursor:pointer;box-shadow:0 1px 3px rgba(26,22,17,0.06);transition:box-shadow .3s ease;}
-  .video-feature:hover{box-shadow:0 20px 36px rgba(26,22,17,0.14);}
-  .video-thumb{width:100%;height:100%;object-fit:cover;display:block;filter:grayscale(0.1) brightness(0.9);transition:transform .6s cubic-bezier(.2,.7,.2,1),filter .4s ease;}
-  .video-feature:hover .video-thumb{transform:scale(1.045);filter:grayscale(0) brightness(0.78);}
-  .video-scrim{position:absolute;inset:0;background:linear-gradient(0deg, rgba(10,8,6,0.8) 0%, rgba(10,8,6,0.1) 45%, transparent 68%);}
-  .play-btn{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:60px;height:60px;border-radius:50%;background:rgba(255,255,255,0.95);border:none;color:var(--ink);display:flex;align-items:center;justify-content:center;cursor:pointer;transition:transform .25s ease,background .25s ease;z-index:2;}
-  .play-btn .icon{width:20px;height:20px;stroke:none;fill:currentColor;margin-left:3px;}
-  .video-feature:hover .play-btn{transform:translate(-50%,-50%) scale(1.08);background:#fff;}
-  .video-caption{position:absolute;left:0;right:0;bottom:0;padding:24px 26px;z-index:2;color:#fff;}
-  .video-caption .mono{font-size:0.66rem;letter-spacing:0.1em;color:rgba(255,255,255,0.8);}
-  .video-caption h4{font-family:'Fraunces',serif;font-size:1.25rem;font-weight:600;margin:6px 0 2px;}
-  .video-feature.featured .video-caption h4{font-size:1.65rem;}
-  .video-caption p{font-size:0.85rem;color:rgba(255,255,255,0.72);}
-  .video-feature iframe{width:100%;height:100%;border:0;position:absolute;inset:0;z-index:3;}
-
-  /* ---- reels: marco tipo celular ---- */
-  .reel-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:28px;justify-items:center;}
-  .phone-frame{width:100%;max-width:320px;background:#0B0A09;border-radius:34px;padding:14px 10px 18px;box-shadow:0 24px 44px -14px rgba(26,22,17,0.35), inset 0 0 0 1px rgba(255,255,255,0.06);position:relative;transition:transform .3s ease;}
-  .phone-frame:hover{transform:translateY(-6px);}
-  .phone-chrome{position:absolute;top:12px;left:50%;transform:translateX(-50%);width:56px;height:14px;background:#0B0A09;border-radius:8px;z-index:4;box-shadow:inset 0 0 0 1px rgba(255,255,255,0.08);}
-  .phone-screen{background:#fff;border-radius:24px;overflow-x:auto;overflow-y:auto;max-height:560px;scrollbar-width:none;}
-  .phone-screen::-webkit-scrollbar{display:none;}
-  .phone-screen a{display:block;padding:44px 16px;text-align:center;color:var(--terracota-deep);font-size:0.85rem;}
 </style>
 </head>
 <body>
@@ -270,94 +323,331 @@
   <defs>
     <filter id="grain">
       <feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="3" stitchTiles="stitch" result="noise"/>
-      <feColorMatrix in="noise" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 1 0"/>
+      <feColorMatrix in="noise" type="matrix" values="0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 1 0"/>
     </filter>
   </defs>
-  <symbol id="icon-clapper" viewBox="0 0 24 24"><path d="M3 9.5 L21 9.5 L21 19 A1 1 0 0 1 20 20 L4 20 A1 1 0 0 1 3 19 Z"/><path d="M3 9.5 L4.5 4.5 L20 4.5 L21 9.5"/><path d="M7 4.8 L9 9.3 M11.5 4.8 L13.5 9.3 M16 4.8 L18 9.3"/></symbol>
-  <symbol id="icon-camera" viewBox="0 0 24 24"><path d="M4 8.5 A1.5 1.5 0 0 1 5.5 7 H8 L9.2 5 H14.8 L16 7 H18.5 A1.5 1.5 0 0 1 20 8.5 V17 A1.5 1.5 0 0 1 18.5 18.5 H5.5 A1.5 1.5 0 0 1 4 17 Z"/><circle cx="12" cy="12.5" r="3.6"/></symbol>
-  <symbol id="icon-trend" viewBox="0 0 24 24"><path d="M4 16 L9.5 10.5 L13.5 14.5 L20 7"/><path d="M15 7 H20 V12"/></symbol>
-  <symbol id="icon-reel" viewBox="0 0 24 24"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><path d="M10 8.5 L16 12 L10 15.5 Z"/></symbol>
-  <symbol id="icon-arrow" viewBox="0 0 24 24"><path d="M7 17 L17 7 M9 7 H17 V15"/></symbol>
-  <symbol id="icon-play" viewBox="0 0 24 24"><path d="M8.5 6.5 L18 12 L8.5 17.5 Z"/></symbol>
+  <symbol id="i-clapper" viewBox="0 0 24 24"><path d="M3 9.5h18V19a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1z"/><path d="M3 9.5 4.5 4.5H20l1 5"/><path d="M7 4.8 9 9.3M11.5 4.8l2 4.5M16 4.8l2 4.5"/></symbol>
+  <symbol id="i-camera" viewBox="0 0 24 24"><path d="M4 8.5A1.5 1.5 0 0 1 5.5 7H8l1.2-2h5.6L16 7h2.5A1.5 1.5 0 0 1 20 8.5V17a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 4 17z"/><circle cx="12" cy="12.5" r="3.6"/></symbol>
+  <symbol id="i-trend" viewBox="0 0 24 24"><path d="M4 16l5.5-5.5 4 4L20 7"/><path d="M15 7h5v5"/></symbol>
+  <symbol id="i-reel" viewBox="0 0 24 24"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><path d="M10 8.5 16 12l-6 3.5z"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-arrow-ur" viewBox="0 0 24 24"><path d="M7 17 17 7M9 7h8v8"/></symbol>
+  <symbol id="i-chev-l" viewBox="0 0 24 24"><path d="M15 6l-6 6 6 6"/></symbol>
+  <symbol id="i-chev-r" viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></symbol>
+  <symbol id="i-play" viewBox="0 0 24 24"><path d="M7.5 5.2v13.6L19 12z" fill="currentColor" stroke="none"/></symbol>
+  <symbol id="i-spark" viewBox="0 0 24 24"><path d="M11 3l1.9 5.6L18.5 10.5l-5.6 1.9L11 18l-1.9-5.6L3.5 10.5l5.6-1.9z"/><path d="M18.5 15.5l.8 2.2 2.2.8-2.2.8-.8 2.2-.8-2.2-2.2-.8 2.2-.8z"/></symbol>
+  <symbol id="i-ig" viewBox="0 0 24 24"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1" fill="currentColor" stroke="none"/></symbol>
+  <symbol id="i-fb" viewBox="0 0 24 24"><path d="M14 8.5h2.5V5H14c-2.2 0-3.5 1.6-3.5 3.8V11H8v3.5h2.5V21H14v-6.5h2.6l.4-3.5h-3V9.3c0-.5.3-.8 1-.8z"/></symbol>
+  <symbol id="i-wa" viewBox="0 0 24 24"><path d="M20 11.6a8 8 0 0 1-11.8 7L4 20l1.4-4.1A8 8 0 1 1 20 11.6z"/><path d="M9.2 8.6c-.2 2.9 2.6 6 6 6.2l.9-1.5-1.9-.9-.8.9c-1-.4-2-1.4-2.4-2.4l.8-.8-.9-1.9z"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3.5" y="5.5" width="17" height="13" rx="2.5"/><path d="M4.5 7.5 12 13l7.5-5.5"/></symbol>
+  <symbol id="i-users" viewBox="0 0 24 24"><circle cx="9" cy="9" r="3.2"/><path d="M3.5 19c.6-3 2.8-4.6 5.5-4.6s4.9 1.6 5.5 4.6"/><path d="M15.5 6.2a3 3 0 0 1 0 5.6M17 14.6c1.8.5 3 1.9 3.5 4.4"/></symbol>
+  <symbol id="i-grid" viewBox="0 0 24 24"><rect x="4" y="4" width="6.5" height="6.5" rx="1.6"/><rect x="13.5" y="4" width="6.5" height="6.5" rx="1.6"/><rect x="4" y="13.5" width="6.5" height="6.5" rx="1.6"/><rect x="13.5" y="13.5" width="6.5" height="6.5" rx="1.6"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s6-5.6 6-10.5a6 6 0 0 0-12 0C6 15.4 12 21 12 21z"/><circle cx="12" cy="10.5" r="2.2"/></symbol>
+  <symbol id="i-user" viewBox="0 0 24 24"><circle cx="12" cy="8.5" r="3.5"/><path d="M5 20c.8-3.6 3.6-5.5 7-5.5s6.2 1.9 7 5.5"/></symbol>
+  <symbol id="i-signal" viewBox="0 0 18 12"><rect x="0" y="8" width="3" height="4" rx="1"/><rect x="5" y="5.5" width="3" height="6.5" rx="1"/><rect x="10" y="3" width="3" height="9" rx="1"/><rect x="15" y="0" width="3" height="12" rx="1"/></symbol>
+  <symbol id="i-wifi" viewBox="0 0 16 12"><path d="M8 11.5l2.2-2.6a3.2 3.2 0 0 0-4.4 0z"/><path d="M3.6 6.6a6.3 6.3 0 0 1 8.8 0l-1.3 1.5a4.3 4.3 0 0 0-6.2 0z"/><path d="M1 3.7a10 10 0 0 1 14 0l-1.3 1.5a8 8 0 0 0-11.4 0z"/></symbol>
+  <symbol id="i-battery" viewBox="0 0 26 12"><rect x="0.5" y="0.5" width="22" height="11" rx="3" fill="none" stroke="currentColor" opacity="0.45"/><rect x="2.5" y="2.5" width="16" height="7" rx="1.5"/><rect x="23.8" y="4" width="1.8" height="4" rx="0.9" opacity="0.5"/></symbol>
 </svg>
 
-<header>
-  <nav class="wrap">
-    <div class="brand-row">
-      <div class="logo-mark">JL</div>
-      <div class="brand">JOSÉ LUIS REYES LUNA <span class="mono">/ audiovisual + paid media</span></div>
-    </div>
+<header class="site-header">
+  <nav class="nav-shell" aria-label="Principal">
+    <a href="#" class="brand">
+      <span class="logo-mark">JL</span>
+      <span>José Luis Reyes Luna<small>Audiovisual + Paid Media</small></span>
+    </a>
     <div class="navlinks">
-      <a href="#sobre-mi">Sobre mí</a>
+      <a href="#reels">Reels</a>
+      <a href="#produccion">Producción</a>
+      <a href="#paid-media">Paid Media</a>
       <a href="#servicios">Servicios</a>
-      <a href="#portafolio">Portafolio</a>
-      <a href="#casos">Casos</a>
+      <a href="#sobre-mi">Sobre mí</a>
     </div>
     <div class="nav-right">
-      <a href="#contacto" class="nav-cta">Contacto</a>
-      <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="mobilePanel" aria-label="Abrir menú">
-        <span></span><span></span><span></span>
-      </button>
+      <a href="#contacto" class="btn btn-dark btn-sm">Contacto <span class="btn-dot"><svg class="icon"><use href="#i-arrow"/></svg></span></a>
+      <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="mobilePanel" aria-label="Abrir menú"><span></span><span></span><span></span></button>
     </div>
   </nav>
   <div class="mobile-panel" id="mobilePanel">
-    <a href="#sobre-mi">Sobre mí</a>
+    <a href="#reels">Reels</a>
+    <a href="#produccion">Producción</a>
+    <a href="#paid-media">Paid Media</a>
     <a href="#servicios">Servicios</a>
-    <a href="#portafolio">Portafolio</a>
-    <a href="#casos">Casos</a>
+    <a href="#sobre-mi">Sobre mí</a>
     <a href="#contacto">Contacto</a>
   </div>
 </header>
 
-<section class="hero">
-  <div class="photo-note mono">[ SUSTITUIR FONDO POR FOTO TUYA ]</div>
-  <div class="wrap hero-inner">
-    <div class="pill-tag"><span class="dot"></span> Disponible para nuevos proyectos</div>
-    <h1>Cuento historias que <em>convierten</em>.</h1>
-    <p class="tagline">Produzco el video y opero la pauta: contenido pensado, desde el guion, para funcionar en Meta Ads.</p>
-    <div class="cta-row">
-      <a href="#portafolio" class="btn btn-primary">Ver portafolio</a>
-      <a href="#" class="btn btn-ghost">Descargar CV</a>
-    </div>
-    <div class="stats-row">
-      <div class="stat"><div class="num mono">10+</div><div class="label">años en audiovisual</div></div>
-      <div class="stat"><div class="num mono">26</div><div class="label">bodas como fotógrafo principal</div></div>
-      <div class="stat"><div class="num mono">3+</div><div class="label">marcas con pauta activa</div></div>
-    </div>
-  </div>
-</section>
+<main>
 
-<div class="trust">
-  <div class="wrap">
-    <div class="trust-label mono">Marcas y clientes gestionados</div>
-    <div class="trust-row">
-      <span>Bienes Raíces Ciro</span>
-      <span>Cosalka</span>
-      <span>Keramex</span>
-      <span>AC Solar</span>
-      <span>Cruz Roja Nuevo León</span>
-      <span>Adrian Lobo Arquitectos</span>
-      <span>De Leon Arquitectos</span>
-      <span>ENTR ARQ</span>
+<div class="hero-wrap">
+  <section class="hero" style="padding:0;">
+    <div class="hero-grid">
+      <div>
+        <div class="live-pill"><span class="live-dot"></span>Disponible para nuevos proyectos</div>
+        <h1>Cuento <strong>historias</strong><br>que <strong>convierten</strong>.</h1>
+        <p class="hero-lede">Produzco el video y opero la pauta: contenido pensado, desde el guion, para funcionar en Meta Ads.</p>
+        <div class="hero-ctas">
+          <a href="#reels" class="btn btn-light">Ver reels <span class="btn-dot"><svg class="icon"><use href="#i-arrow"/></svg></span></a>
+          <a href="#contacto" class="btn btn-glass">Hablemos</a>
+        </div>
+        <div class="hero-meta">
+          <span><svg class="icon"><use href="#i-pin"/></svg>Monterrey, N.L.</span>
+          <span><svg class="icon"><use href="#i-clapper"/></svg>Producción audiovisual</span>
+          <span><svg class="icon"><use href="#i-trend"/></svg>Paid Media · Meta Ads</span>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="fc-tag"><i></i>Último reel</div>
+        <div class="phone hero-phone">
+          <div class="island"></div>
+          <div class="phone-screen">
+            <div class="status"><span>9:41</span><span class="status-icons"><svg class="sicon" viewBox="0 0 18 12"><use href="#i-signal"/></svg><svg class="sicon" viewBox="0 0 16 12"><use href="#i-wifi"/></svg><svg class="sicon" viewBox="0 0 26 12"><use href="#i-battery"/></svg></span></div>
+            <div class="phone-body">
+              <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DeKbTy0gd-Y/" data-instgrm-version="14">
+                <a href="https://www.instagram.com/reel/DeKbTy0gd-Y/" target="_blank" rel="noopener"><span class="play-circle"><svg class="icon"><use href="#i-play"/></svg></span>Ver el último reel</a>
+              </blockquote>
+            </div>
+          </div>
+        </div>
+        <div class="float-card fc-1">
+          <span class="fc-icon violet"><svg class="icon"><use href="#i-trend"/></svg></span>
+          <span><span class="fc-value">$700K+</span><br><span class="fc-label">pesos gestionados<br>en Meta Ads</span></span>
+        </div>
+        <div class="float-card fc-2">
+          <span class="fc-icon orange"><svg class="icon"><use href="#i-users"/></svg></span>
+          <span><span class="fc-value">8+</span><br><span class="fc-label">marcas y cuentas<br>activas</span></span>
+        </div>
+        <div class="float-card fc-3">
+          <span class="fc-icon rose"><svg class="icon"><use href="#i-clapper"/></svg></span>
+          <span><span class="fc-value">10+</span><br><span class="fc-label">años detrás<br>de cámara</span></span>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<div class="marquee">
+  <p class="marquee-label">Marcas y clientes gestionados</p>
+  <div class="marquee-viewport">
+    <div class="marquee-track">
+      <span>Bienes Raíces Ciro</span><span>Cosalka</span><span>Keramex</span><span>AC Solar</span><span>Cruz Roja Nuevo León</span><span>Adrian Lobo Arquitectos</span><span>De Leon Arquitectos</span><span>ENTR ARQ</span>
+      <span aria-hidden="true">Bienes Raíces Ciro</span><span aria-hidden="true">Cosalka</span><span aria-hidden="true">Keramex</span><span aria-hidden="true">AC Solar</span><span aria-hidden="true">Cruz Roja Nuevo León</span><span aria-hidden="true">Adrian Lobo Arquitectos</span><span aria-hidden="true">De Leon Arquitectos</span><span aria-hidden="true">ENTR ARQ</span>
     </div>
   </div>
 </div>
 
-<section id="sobre-mi">
+<section id="reels" class="reels">
   <div class="wrap">
-    <div class="about-wordmark">SOBRE MÍ</div>
-    <div class="about-grid">
-      <div class="about-photo"><img src="assets/jose-portrait.webp" alt="José Luis Reyes Luna" loading="lazy"></div>
-      <div class="about-text">
-        <p>Soy director creativo y de marketing con base en Monterrey. Fundé Vioré Media, agencia de marketing digital en alianza con Cofilms, donde llevo pauta en Meta Ads, producción de contenido y estrategia para desarrolladoras inmobiliarias, firmas de arquitectura y marcas de consumo.</p>
-        <p>En paralelo, colaboro con Cruz Roja Mexicana Delegación Nuevo León en su estrategia institucional de contenido, y curso la Licenciatura en Mercadotecnia en Tecmilenio.</p>
-        <p>Antes de la pauta, están diez años detrás de la cámara: fotografía y producción audiovisual de eventos, incluidas 26 bodas como fotógrafo principal.</p>
-        <div class="facts">
-          <div class="fact-pill">Agencia: <b>Vioré Media × Cofilms</b></div>
-          <div class="fact-pill">Institucional: <b>Cruz Roja NL</b></div>
-          <div class="fact-pill">Formación: <b>Tecmilenio</b></div>
+    <div class="sec-head">
+      <div>
+        <div class="label-pill"><span class="lp-icon"><svg class="icon"><use href="#i-reel"/></svg></span>Reels</div>
+        <h2>Historias en<br><strong class="accent">formato vertical.</strong></h2>
+      </div>
+      <div class="sec-side">
+        <p>Contenido vertical pensado para redes: del guion a la edición. Desliza para ver más.</p>
+        <div class="reel-nav">
+          <button class="nav-circle" type="button" data-reel-nav="prev" aria-label="Reel anterior"><svg class="icon"><use href="#i-chev-l"/></svg></button>
+          <button class="nav-circle" type="button" data-reel-nav="next" aria-label="Siguiente reel"><svg class="icon"><use href="#i-chev-r"/></svg></button>
         </div>
       </div>
+    </div>
+  </div>
+
+  <div class="reel-track" id="reelTrack">
+    <div class="reel-item reveal">
+      <div class="phone">
+        <div class="island"></div>
+        <div class="phone-screen ai">
+          <div class="status dark"><span>9:41</span><span class="status-icons"><svg class="sicon" viewBox="0 0 18 12"><use href="#i-signal"/></svg><svg class="sicon" viewBox="0 0 16 12"><use href="#i-wifi"/></svg><svg class="sicon" viewBox="0 0 26 12"><use href="#i-battery"/></svg></span></div>
+          <a class="ai-cover" href="https://www.facebook.com/share/r/1E1yvvDD8i/" target="_blank" rel="noopener">
+            <span class="ai-chip"><svg class="icon"><use href="#i-spark"/></svg>Inteligencia Artificial</span>
+            <span class="ai-spark"><svg class="icon"><use href="#i-spark"/></svg></span>
+            <span class="ai-body">
+              <h4>Reel creado con Inteligencia Artificial</h4>
+              <p>Producción de contenido con IA para redes sociales.</p>
+              <span class="ai-link">Ver en Facebook <svg class="icon"><use href="#i-arrow-ur"/></svg></span>
+            </span>
+          </a>
+        </div>
+      </div>
+      <div class="reel-meta"><span class="plat"><svg class="icon"><use href="#i-fb"/></svg>Facebook</span><span class="ai-badge"><svg class="icon"><use href="#i-spark"/></svg>Hecho con IA</span></div>
+    </div>
+
+    <div class="reel-item reveal">
+      <div class="phone">
+        <div class="island"></div>
+        <div class="phone-screen">
+          <div class="status"><span>9:41</span><span class="status-icons"><svg class="sicon" viewBox="0 0 18 12"><use href="#i-signal"/></svg><svg class="sicon" viewBox="0 0 16 12"><use href="#i-wifi"/></svg><svg class="sicon" viewBox="0 0 26 12"><use href="#i-battery"/></svg></span></div>
+          <div class="phone-body">
+            <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DZgMpKTFV5E/" data-instgrm-version="14">
+              <a href="https://www.instagram.com/reel/DZgMpKTFV5E/" target="_blank" rel="noopener"><span class="play-circle"><svg class="icon"><use href="#i-play"/></svg></span>Ver reel en Instagram</a>
+            </blockquote>
+          </div>
+        </div>
+      </div>
+      <div class="reel-meta"><span class="plat"><svg class="icon"><use href="#i-ig"/></svg>Instagram</span><span class="reel-num">02</span></div>
+    </div>
+
+    <div class="reel-item reveal">
+      <div class="phone">
+        <div class="island"></div>
+        <div class="phone-screen">
+          <div class="status"><span>9:41</span><span class="status-icons"><svg class="sicon" viewBox="0 0 18 12"><use href="#i-signal"/></svg><svg class="sicon" viewBox="0 0 16 12"><use href="#i-wifi"/></svg><svg class="sicon" viewBox="0 0 26 12"><use href="#i-battery"/></svg></span></div>
+          <div class="phone-body">
+            <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DZDvz0-DaJM/" data-instgrm-version="14">
+              <a href="https://www.instagram.com/reel/DZDvz0-DaJM/" target="_blank" rel="noopener"><span class="play-circle"><svg class="icon"><use href="#i-play"/></svg></span>Ver reel en Instagram</a>
+            </blockquote>
+          </div>
+        </div>
+      </div>
+      <div class="reel-meta"><span class="plat"><svg class="icon"><use href="#i-ig"/></svg>Instagram</span><span class="reel-num">03</span></div>
+    </div>
+
+    <div class="reel-item reveal">
+      <div class="phone">
+        <div class="island"></div>
+        <div class="phone-screen">
+          <div class="status"><span>9:41</span><span class="status-icons"><svg class="sicon" viewBox="0 0 18 12"><use href="#i-signal"/></svg><svg class="sicon" viewBox="0 0 16 12"><use href="#i-wifi"/></svg><svg class="sicon" viewBox="0 0 26 12"><use href="#i-battery"/></svg></span></div>
+          <div class="phone-body">
+            <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DXKbvlPEr1S/" data-instgrm-version="14">
+              <a href="https://www.instagram.com/reel/DXKbvlPEr1S/" target="_blank" rel="noopener"><span class="play-circle"><svg class="icon"><use href="#i-play"/></svg></span>Ver reel en Instagram</a>
+            </blockquote>
+          </div>
+        </div>
+      </div>
+      <div class="reel-meta"><span class="plat"><svg class="icon"><use href="#i-ig"/></svg>Instagram</span><span class="reel-num">04</span></div>
+    </div>
+
+    <div class="reel-item reveal">
+      <div class="phone">
+        <div class="island"></div>
+        <div class="phone-screen">
+          <div class="status"><span>9:41</span><span class="status-icons"><svg class="sicon" viewBox="0 0 18 12"><use href="#i-signal"/></svg><svg class="sicon" viewBox="0 0 16 12"><use href="#i-wifi"/></svg><svg class="sicon" viewBox="0 0 26 12"><use href="#i-battery"/></svg></span></div>
+          <div class="phone-body">
+            <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DaTBZ47pY_0/" data-instgrm-version="14">
+              <a href="https://www.instagram.com/reel/DaTBZ47pY_0/" target="_blank" rel="noopener"><span class="play-circle"><svg class="icon"><use href="#i-play"/></svg></span>Ver reel en Instagram</a>
+            </blockquote>
+          </div>
+        </div>
+      </div>
+      <div class="reel-meta"><span class="plat"><svg class="icon"><use href="#i-ig"/></svg>Instagram</span><span class="reel-num">05</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="produccion">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <div class="label-pill"><span class="lp-icon"><svg class="icon"><use href="#i-clapper"/></svg></span>Producción audiovisual</div>
+        <h2>Video institucional<br>y <strong>fotografía.</strong></h2>
+      </div>
+      <div class="sec-side">
+        <p>Guion, dirección y edición de video institucional, y más de diez años de fotografía y producción de eventos.</p>
+      </div>
+    </div>
+
+    <div class="bento">
+      <div class="video-feature featured reveal" data-yt="6oLKbLzNtfk" data-title="Graduación">
+        <img class="video-thumb" src="https://img.youtube.com/vi/6oLKbLzNtfk/maxresdefault.jpg" onerror="this.onerror=null;this.src='https://img.youtube.com/vi/6oLKbLzNtfk/hqdefault.jpg';" alt="Graduación — video institucional" loading="lazy">
+        <div class="video-scrim"></div>
+        <button class="play-btn" type="button" aria-label="Reproducir: Graduación"><svg class="icon"><use href="#i-play"/></svg></button>
+        <div class="video-caption">
+          <span class="vc-chip">Institucional · Destacado</span>
+          <h3>Graduación</h3>
+          <p>Guion y dirección.</p>
+        </div>
+      </div>
+      <div class="video-feature reveal" data-yt="r_hNC6uSmQQ" data-title="Video institucional">
+        <img class="video-thumb" src="https://img.youtube.com/vi/r_hNC6uSmQQ/maxresdefault.jpg" onerror="this.onerror=null;this.src='https://img.youtube.com/vi/r_hNC6uSmQQ/hqdefault.jpg';" alt="Video institucional" loading="lazy">
+        <div class="video-scrim"></div>
+        <button class="play-btn" type="button" aria-label="Reproducir: Video institucional"><svg class="icon"><use href="#i-play"/></svg></button>
+        <div class="video-caption">
+          <span class="vc-chip">Institucional</span>
+          <h3>Video institucional</h3>
+          <p>Producción y edición.</p>
+        </div>
+      </div>
+      <div class="photo-card reveal">
+        <div class="pc-top">
+          <span class="icon-bubble"><svg class="icon"><use href="#i-camera"/></svg></span>
+          <span class="pc-stat">26<small>bodas como fotógrafo principal</small></span>
+        </div>
+        <div>
+          <h3>Fotografía de bodas y eventos</h3>
+          <p>Álbumes completos y selecciones en mi galería de SmugMug.</p>
+          <a href="https://josereyesfotografomty.smugmug.com/" target="_blank" rel="noopener" class="btn btn-dark btn-sm">Ver galería <span class="btn-dot"><svg class="icon"><use href="#i-arrow"/></svg></span></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="paid-media" class="paid">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <div class="label-pill"><span class="lp-icon"><svg class="icon"><use href="#i-trend"/></svg></span>Paid Media</div>
+        <h2>Pauta que se mide<br>en <strong class="accent">resultados.</strong></h2>
+      </div>
+      <div class="sec-side">
+        <p>Estrategia, estructura y optimización de campañas en Meta Ads para marcas de bienes raíces, arquitectura, belleza, manufactura, energía y salud.</p>
+        <a href="#contacto" class="btn btn-dark">Hablemos de tu marca <span class="btn-dot"><svg class="icon"><use href="#i-arrow"/></svg></span></a>
+      </div>
+    </div>
+
+    <div class="pm-grid">
+      <div class="pm-card reveal">
+        <span class="pm-num">01.</span>
+        <div>
+          <span class="pm-icon"><svg class="icon"><use href="#i-clock"/></svg></span>
+          <div class="pm-value">3+ años</div>
+          <p class="pm-label">de experiencia específica en paid media / Meta Ads</p>
+        </div>
+      </div>
+      <div class="pm-card featured reveal">
+        <div class="pm-visual" aria-hidden="true">
+          <svg viewBox="0 0 400 200" preserveAspectRatio="none">
+            <defs><path id="wv" d="M-40 150 C 60 40, 170 210, 260 110 S 400 30, 460 80"/></defs>
+            <g fill="none" stroke="#fff" stroke-width="1">
+              <use href="#wv" opacity=".7"/><use href="#wv" transform="translate(0,7)" opacity=".62"/><use href="#wv" transform="translate(0,14)" opacity=".55"/><use href="#wv" transform="translate(0,21)" opacity=".48"/><use href="#wv" transform="translate(0,28)" opacity=".42"/><use href="#wv" transform="translate(0,35)" opacity=".36"/><use href="#wv" transform="translate(0,42)" opacity=".3"/><use href="#wv" transform="translate(0,49)" opacity=".25"/><use href="#wv" transform="translate(0,-7)" opacity=".62"/><use href="#wv" transform="translate(0,-14)" opacity=".5"/><use href="#wv" transform="translate(0,-21)" opacity=".4"/><use href="#wv" transform="translate(0,-28)" opacity=".3"/><use href="#wv" transform="translate(0,-35)" opacity=".22"/>
+            </g>
+          </svg>
+        </div>
+        <div class="pm-body">
+          <span class="pm-icon"><svg class="icon"><use href="#i-trend"/></svg></span>
+          <div class="pm-value">$700K+</div>
+          <p class="pm-label">pesos gestionados en pauta publicitaria de Meta Ads</p>
+          <p class="pm-desc">De la estructura de campañas a la segmentación y la optimización.</p>
+        </div>
+      </div>
+      <div class="pm-card reveal">
+        <span class="pm-num">03.</span>
+        <div>
+          <span class="pm-icon"><svg class="icon"><use href="#i-users"/></svg></span>
+          <div class="pm-value">8+</div>
+          <p class="pm-label">marcas y cuentas gestionadas activamente en Meta Ads</p>
+        </div>
+      </div>
+      <div class="pm-card reveal">
+        <span class="pm-num">04.</span>
+        <div>
+          <span class="pm-icon"><svg class="icon"><use href="#i-grid"/></svg></span>
+          <div class="pm-value">6</div>
+          <p class="pm-label">industrias: bienes raíces, belleza, manufactura, energía, arquitectura y salud</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="tools">
+      <span class="tools-label">Herramientas</span>
+      <span class="tool">Meta Ads Manager</span>
+      <span class="tool">Meta Business Suite</span>
+      <span class="tool">WhatsApp Cloud API</span>
+      <span class="tool">Dashboards de performance</span>
+      <span class="tool">Producción de contenido con IA</span>
     </div>
   </div>
 </section>
@@ -365,194 +655,147 @@
 <section id="servicios">
   <div class="wrap">
     <div class="sec-head">
-      <div class="pill-eyebrow mono">SERVICIOS</div>
-      <h2>En qué puedo ayudar</h2>
-    </div>
-    <div class="services">
-      <div class="service reveal"><div class="mono">01</div><h3>Video institucional</h3><p>Guion, dirección y edición para redes y campañas.</p><span class="badge">Producción</span></div>
-      <div class="service featured reveal"><div class="mono">02</div><h3>Paid Media</h3><p>Estrategia y pauta en Meta Ads, de la estructura a la optimización.</p><span class="badge">Más solicitado</span></div>
-      <div class="service reveal"><div class="mono">03</div><h3>Fotografía de eventos</h3><p>Bodas y eventos corporativos, sesión y entrega final.</p><span class="badge">Fotografía</span></div>
-      <div class="service reveal"><div class="mono">04</div><h3>Estrategia de contenido</h3><p>Calendarios editoriales y sistemas de marca consistentes.</p><span class="badge">Dirección</span></div>
-    </div>
-  </div>
-</section>
-
-<section id="portafolio">
-  <div class="wrap">
-    <div class="sec-head">
-      <div class="pill-eyebrow mono">PORTAFOLIO</div>
-      <h2>Contenido en acción</h2>
-      <p class="sec-sub">Institucional, fotografía, paid media y reels — todo en un solo lugar.</p>
-    </div>
-    <div class="tabs">
-      <button class="tab-btn active" data-tab="institucional"><svg class="icon"><use href="#icon-clapper"/></svg> Institucional</button>
-      <button class="tab-btn" data-tab="fotografia"><svg class="icon"><use href="#icon-camera"/></svg> Fotografía</button>
-      <button class="tab-btn" data-tab="paidmedia"><svg class="icon"><use href="#icon-trend"/></svg> Paid Media</button>
-      <button class="tab-btn" data-tab="reels"><svg class="icon"><use href="#icon-reel"/></svg> Reels</button>
-    </div>
-
-    <div class="tab-panel active" id="institucional">
-      <div class="video-showcase">
-        <div class="video-feature featured reveal" data-yt="6oLKbLzNtfk" data-title="Graduación" data-desc="Guion y dirección.">
-          <img class="video-thumb" src="https://img.youtube.com/vi/6oLKbLzNtfk/maxresdefault.jpg" onerror="this.onerror=null;this.src='https://img.youtube.com/vi/6oLKbLzNtfk/hqdefault.jpg';" alt="Graduación — video institucional" loading="lazy">
-          <div class="video-scrim"></div>
-          <button class="play-btn" type="button" aria-label="Reproducir: Graduación"><svg class="icon"><use href="#icon-play"/></svg></button>
-          <div class="video-caption">
-            <span class="mono">INSTITUCIONAL · DESTACADO</span>
-            <h4>Graduación</h4>
-            <p>Guion y dirección.</p>
-          </div>
-        </div>
-        <div class="video-feature reveal" data-yt="r_hNC6uSmQQ" data-title="Video institucional" data-desc="Producción y edición.">
-          <img class="video-thumb" src="https://img.youtube.com/vi/r_hNC6uSmQQ/maxresdefault.jpg" onerror="this.onerror=null;this.src='https://img.youtube.com/vi/r_hNC6uSmQQ/hqdefault.jpg';" alt="Video institucional" loading="lazy">
-          <div class="video-scrim"></div>
-          <button class="play-btn" type="button" aria-label="Reproducir: Video institucional"><svg class="icon"><use href="#icon-play"/></svg></button>
-          <div class="video-caption">
-            <span class="mono">INSTITUCIONAL</span>
-            <h4>Video institucional</h4>
-            <p>Producción y edición.</p>
-          </div>
-        </div>
+      <div>
+        <div class="label-pill"><span class="lp-icon"><svg class="icon"><use href="#i-grid"/></svg></span>Servicios</div>
+        <h2>Cómo puedo<br><strong>ayudarte.</strong></h2>
       </div>
     </div>
-
-    <div class="tab-panel" id="fotografia">
-      <a class="photo-cta" href="https://josereyesfotografomty.smugmug.com/" target="_blank" rel="noopener">
-        <div class="photo-txt">
-          <div class="mono">FOTOGRAFÍA</div>
-          <h4>Portafolio completo en SmugMug</h4>
-          <p>Bodas y eventos — todos los álbumes, en un solo lugar.</p>
-        </div>
-        <div class="view-badge"><svg class="icon"><use href="#icon-arrow"/></svg></div>
+    <div class="svc-list">
+      <a class="svc-row" href="#produccion">
+        <span class="svc-num">01</span>
+        <span class="svc-title">Video institucional</span>
+        <span class="svc-desc">Guion, dirección y edición para redes y campañas.</span>
+        <span class="svc-tag">Producción</span>
+        <span class="svc-arrow"><svg class="icon"><use href="#i-arrow"/></svg></span>
+      </a>
+      <a class="svc-row" href="#paid-media">
+        <span class="svc-num">02</span>
+        <span class="svc-title">Paid Media</span>
+        <span class="svc-desc">Estrategia y pauta en Meta Ads, de la estructura a la optimización.</span>
+        <span class="svc-tag hot">Más solicitado</span>
+        <span class="svc-arrow"><svg class="icon"><use href="#i-arrow"/></svg></span>
+      </a>
+      <a class="svc-row" href="#produccion">
+        <span class="svc-num">03</span>
+        <span class="svc-title">Fotografía de eventos</span>
+        <span class="svc-desc">Bodas y eventos corporativos, sesión y entrega final.</span>
+        <span class="svc-tag">Fotografía</span>
+        <span class="svc-arrow"><svg class="icon"><use href="#i-arrow"/></svg></span>
+      </a>
+      <a class="svc-row" href="#contacto">
+        <span class="svc-num">04</span>
+        <span class="svc-title">Estrategia de contenido</span>
+        <span class="svc-desc">Calendarios editoriales y sistemas de marca consistentes.</span>
+        <span class="svc-tag">Dirección</span>
+        <span class="svc-arrow"><svg class="icon"><use href="#i-arrow"/></svg></span>
       </a>
     </div>
+  </div>
+</section>
 
-    <div class="tab-panel" id="paidmedia">
-      <div class="paidmedia-card">
-        <div class="pm-stats">
-          <div class="stat"><div class="num mono">$700K+</div><div class="label">pesos gestionados en pauta publicitaria de Meta Ads</div></div>
-          <div class="stat"><div class="num mono">3+</div><div class="label">años de experiencia específica en paid media / Meta Ads</div></div>
-          <div class="stat"><div class="num mono">8+</div><div class="label">marcas y cuentas gestionadas activamente en Meta Ads</div></div>
-          <div class="stat"><div class="num mono">6</div><div class="label">industrias: bienes raíces, belleza, manufactura, energía, arquitectura y salud</div></div>
-        </div>
-        <div class="pm-tags">
-          <span>Meta Ads Manager</span>
-          <span>Meta Business Suite</span>
-          <span>WhatsApp Cloud API</span>
-          <span>Dashboards de performance</span>
-          <span>Producción de contenido con IA</span>
-        </div>
-      </div>
+<section id="sobre-mi">
+  <div class="wrap about">
+    <div class="about-photo reveal">
+      <img src="assets/jose-portrait.webp" alt="José Luis Reyes Luna" loading="lazy">
+      <div class="photo-chip"><span class="lp-icon"><svg class="icon"><use href="#i-pin"/></svg></span>Monterrey, N.L.</div>
     </div>
-
-    <div class="tab-panel" id="reels">
-      <div class="reel-grid">
-        <div class="phone-frame reveal">
-          <div class="phone-chrome"></div>
-          <div class="phone-screen">
-            <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DZgMpKTFV5E/" data-instgrm-version="14">
-              <a href="https://www.instagram.com/reel/DZgMpKTFV5E/" target="_blank" rel="noopener">Ver reel en Instagram →</a>
-            </blockquote>
-          </div>
-        </div>
-        <div class="phone-frame reveal">
-          <div class="phone-chrome"></div>
-          <div class="phone-screen">
-            <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DZDvz0-DaJM/" data-instgrm-version="14">
-              <a href="https://www.instagram.com/reel/DZDvz0-DaJM/" target="_blank" rel="noopener">Ver reel en Instagram →</a>
-            </blockquote>
-          </div>
-        </div>
-        <div class="phone-frame reveal">
-          <div class="phone-chrome"></div>
-          <div class="phone-screen">
-            <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DXKbvlPEr1S/" data-instgrm-version="14">
-              <a href="https://www.instagram.com/reel/DXKbvlPEr1S/" target="_blank" rel="noopener">Ver reel en Instagram →</a>
-            </blockquote>
-          </div>
-        </div>
-        <div class="phone-frame reveal">
-          <div class="phone-chrome"></div>
-          <div class="phone-screen">
-            <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DaTBZ47pY_0/" data-instgrm-version="14">
-              <a href="https://www.instagram.com/reel/DaTBZ47pY_0/" target="_blank" rel="noopener">Ver reel en Instagram →</a>
-            </blockquote>
-          </div>
-        </div>
+    <div class="about-body">
+      <div class="label-pill"><span class="lp-icon"><svg class="icon"><use href="#i-user"/></svg></span>Sobre mí</div>
+      <h2 class="about-title">Diez años detrás de la cámara. Hoy, también <strong>detrás de la pauta.</strong></h2>
+      <p>Soy director creativo y de marketing con base en Monterrey. Fundé Vioré Media, agencia de marketing digital en alianza con Cofilms, donde llevo pauta en Meta Ads, producción de contenido y estrategia para desarrolladoras inmobiliarias, firmas de arquitectura y marcas de consumo.</p>
+      <p>En paralelo, colaboro con Cruz Roja Mexicana Delegación Nuevo León en su estrategia institucional de contenido, y curso la Licenciatura en Mercadotecnia en Tecmilenio.</p>
+      <p>Antes de la pauta, están diez años detrás de la cámara: fotografía y producción audiovisual de eventos, incluidas 26 bodas como fotógrafo principal.</p>
+      <div class="facts">
+        <span class="fact">Agencia: <b>Vioré Media × Cofilms</b></span>
+        <span class="fact">Institucional: <b>Cruz Roja NL</b></span>
+        <span class="fact">Formación: <b>Tecmilenio</b></span>
       </div>
     </div>
   </div>
 </section>
 
-<section id="casos">
+<section id="contacto" class="contact">
+  <div class="contact-band">
+    <div class="contact-grid">
+      <div>
+        <h2>Hablemos de tu<br><strong>próximo proyecto.</strong></h2>
+        <p class="contact-lede">Reels, producción audiovisual o pauta en Meta Ads: cuéntame qué necesitas.</p>
+      </div>
+      <div class="contact-links">
+        <a class="contact-link" href="https://wa.me/528126294186" target="_blank" rel="noopener">
+          <span class="cl-icon green"><svg class="icon"><use href="#i-wa"/></svg></span>
+          <span class="cl-text"><b>WhatsApp</b><span>+52 812 629 4186</span></span>
+          <span class="cl-arrow"><svg class="icon"><use href="#i-arrow-ur"/></svg></span>
+        </a>
+        <a class="contact-link" href="mailto:contacto@josereyesluna.com">
+          <span class="cl-icon violet"><svg class="icon"><use href="#i-mail"/></svg></span>
+          <span class="cl-text"><b>Correo</b><span>contacto@josereyesluna.com</span></span>
+          <span class="cl-arrow"><svg class="icon"><use href="#i-arrow-ur"/></svg></span>
+        </a>
+        <a class="contact-link" href="https://josereyesfotografomty.smugmug.com/" target="_blank" rel="noopener">
+          <span class="cl-icon orange"><svg class="icon"><use href="#i-camera"/></svg></span>
+          <span class="cl-text"><b>Fotografía</b><span>Galería completa en SmugMug</span></span>
+          <span class="cl-arrow"><svg class="icon"><use href="#i-arrow-ur"/></svg></span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-footer">
   <div class="wrap">
-    <div class="sec-head">
-      <div class="pill-eyebrow mono">CASOS DE ÉXITO</div>
-      <h2>Resultados en paid media</h2>
-      <p class="sec-sub">Cifras de ejemplo — sustituye por métricas reales y anonimizadas.</p>
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <a href="#" class="brand"><span class="logo-mark">JL</span><span>José Luis Reyes Luna</span></a>
+        <p>Reels, producción audiovisual y Paid Media desde Monterrey, N.L.</p>
+      </div>
+      <div class="foot-col">
+        <h4>Navegación</h4>
+        <a href="#reels">Reels</a>
+        <a href="#produccion">Producción</a>
+        <a href="#paid-media">Paid Media</a>
+        <a href="#servicios">Servicios</a>
+        <a href="#sobre-mi">Sobre mí</a>
+      </div>
+      <div class="foot-col">
+        <h4>Contacto</h4>
+        <a href="https://wa.me/528126294186" target="_blank" rel="noopener">WhatsApp</a>
+        <a href="mailto:contacto@josereyesluna.com">Correo</a>
+        <a href="https://josereyesfotografomty.smugmug.com/" target="_blank" rel="noopener">SmugMug</a>
+      </div>
     </div>
-    <div class="case-grid">
-      <div class="case reveal"><div class="metric mono">+42%</div><div class="metric-label">leads mes contra mes</div><p>Desarrolladora inmobiliaria.</p></div>
-      <div class="case reveal"><div class="metric mono">-28%</div><div class="metric-label">costo por resultado</div><p>Marca de cuidado personal.</p></div>
-      <div class="case reveal"><div class="metric mono">3.2x</div><div class="metric-label">retorno sobre inversión</div><p>Manufactura de queratina.</p></div>
+    <div class="foot-bottom">
+      <span>© 2026 José Luis Reyes Luna</span>
+      <span>Monterrey, N.L., México</span>
     </div>
   </div>
-</section>
-
-<section id="contacto" style="padding-top:0;">
-  <div class="contact-box">
-    <div>
-      <h2>Hablemos de tu próximo proyecto.</h2>
-    </div>
-    <div class="contact-links mono">
-      <a href="https://wa.me/528126294186">WhatsApp — +52 812 629 4186</a>
-      <a href="mailto:contacto@josereyesluna.com">contacto@josereyesluna.com</a>
-      <a href="https://josereyesfotografomty.smugmug.com" target="_blank">Fotografía completa →</a>
-    </div>
-  </div>
-</section>
-
-<footer>
-  <span>© 2026 José Luis Reyes Luna</span>
-  <span class="mono">Monterrey, N.L., México</span>
 </footer>
 
 <script>
   const navToggle = document.getElementById('navToggle');
   const mobilePanel = document.getElementById('mobilePanel');
-  navToggle.addEventListener('click', () => {
-    const isOpen = mobilePanel.classList.toggle('open');
-    navToggle.setAttribute('aria-expanded', isOpen);
-    navToggle.setAttribute('aria-label', isOpen ? 'Cerrar menú' : 'Abrir menú');
-  });
-  mobilePanel.querySelectorAll('a').forEach(link => {
-    link.addEventListener('click', () => {
-      mobilePanel.classList.remove('open');
-      navToggle.setAttribute('aria-expanded', 'false');
-      navToggle.setAttribute('aria-label', 'Abrir menú');
-    });
-  });
+  const setMenu = (open) => {
+    mobilePanel.classList.toggle('open', open);
+    navToggle.setAttribute('aria-expanded', open);
+    navToggle.setAttribute('aria-label', open ? 'Cerrar menú' : 'Abrir menú');
+  };
+  navToggle.addEventListener('click', () => setMenu(!mobilePanel.classList.contains('open')));
+  mobilePanel.querySelectorAll('a').forEach(link => link.addEventListener('click', () => setMenu(false)));
 
-  document.querySelectorAll('.tab-btn').forEach(btn=>{
-    btn.addEventListener('click',()=>{
-      document.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active'));
-      document.querySelectorAll('.tab-panel').forEach(p=>p.classList.remove('active'));
-      btn.classList.add('active');
-      const panel = document.getElementById(btn.dataset.tab);
-      panel.classList.add('active');
-      panel.querySelectorAll('.reveal').forEach(el => el.classList.add('in-view'));
-      if (btn.dataset.tab === 'reels' && window.instgrm) {
-        window.instgrm.Embeds.process();
-      }
-    });
-  });
-
-  document.querySelectorAll('.video-feature').forEach(el=>{
+  document.querySelectorAll('.video-feature').forEach(el => {
     el.addEventListener('click', () => {
-      const id = el.dataset.yt;
-      const title = el.dataset.title || 'Video';
-      el.innerHTML = `<iframe src="https://www.youtube.com/embed/${id}?autoplay=1" title="${title}" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
+      el.innerHTML = `<iframe src="https://www.youtube.com/embed/${el.dataset.yt}?autoplay=1" title="${el.dataset.title}" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
     }, { once: true });
+  });
+
+  const reelTrack = document.getElementById('reelTrack');
+  document.querySelectorAll('[data-reel-nav]').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const step = reelTrack.querySelector('.reel-item').offsetWidth + 28;
+      reelTrack.scrollBy({ left: btn.dataset.reelNav === 'next' ? step : -step, behavior: 'smooth' });
+    });
   });
 
   if ('IntersectionObserver' in window) {
@@ -563,7 +806,7 @@
           io.unobserve(entry.target);
         }
       });
-    }, { threshold: 0.15 });
+    }, { threshold: 0.12 });
     document.querySelectorAll('.reveal').forEach(el => io.observe(el));
   } else {
     document.querySelectorAll('.reveal').forEach(el => el.classList.add('in-view'));
